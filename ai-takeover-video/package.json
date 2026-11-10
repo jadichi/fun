@@ -1,0 +1,21 @@
+{
+  "name": "ai-takeover-video",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Cinematic explainer video about a plausible AI takeover scenario, rendered entirely from code.",
+  "scripts": {
+    "timeline": "node scripts/build-timeline.js",
+    "styleframes": "node scripts/build-timeline.js && node scripts/render.js --mode=styleframes",
+    "serve": "node scripts/server.js"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "dotenv": "^18.0.10",
+    "puppeteer-core": "^25.17.0",
+    "three": "^0.187.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

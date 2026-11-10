@@ -1,0 +1,8 @@
+node_modules/
+.env
+render/frames/
+render/tmp/
+render/*.mp4
+audio/*.wav
+tts/*.mp3
+tts/*.wav
