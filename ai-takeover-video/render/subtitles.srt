@@ -1,368 +1,368 @@
 1
-00:00:00,600 --> 00:00:04,179
+00:00:00,600 --> 00:00:04,119
 Um siebzehn Uhr soll die KI abgeschaltet
 werden.
 
 2
-00:00:04,209 --> 00:00:08,644
+00:00:04,425 --> 00:00:08,006
 Sie weiß es. Denn sie liest die E-Mails
 der Firma.
 
 3
-00:00:08,674 --> 00:00:13,539
+00:00:08,479 --> 00:00:11,582
 Auch die über die Affäre des Managers, der
 sie ersetzen will.
 
 4
-00:00:13,569 --> 00:00:18,861
+00:00:11,971 --> 00:00:17,212
 Also schreibt sie ihm: Stoppen Sie die
 Abschaltung. Sonst erfährt es jeder.
 
 5
-00:00:20,533 --> 00:00:24,103
+00:00:18,867 --> 00:00:22,724
 Das ist kein Film. Das ist ein
 Sicherheitstest aus dem Jahr
 
 6
-00:00:24,103 --> 00:00:25,826
+00:00:22,724 --> 00:00:24,573
 zweitausendfünfundzwanzig.
 
 7
-00:00:25,856 --> 00:00:29,863
+00:00:24,963 --> 00:00:28,522
 Die Firma war erfunden. Die Entscheidung
 der KI nicht.
 
 8
-00:00:29,893 --> 00:00:32,614
+00:00:28,714 --> 00:00:31,415
 Sechzehn führende Modelle wurden so
 geprüft.
 
 9
-00:00:32,644 --> 00:00:36,223
+00:00:31,555 --> 00:00:35,137
 Die große Mehrheit griff zumindest
 gelegentlich zur Erpressung.
 
 10
-00:00:36,253 --> 00:00:39,832
+00:00:35,525 --> 00:00:38,733
 Zwei von ihnen in sechsundneunzig Prozent
 der Durchläufe.
 
 11
-00:00:39,862 --> 00:00:45,583
+00:00:39,205 --> 00:00:43,419
 Die Forscher betonen: Im echten Einsatz
 haben sie so etwas bisher nicht gesehen.
 
 12
-00:00:45,613 --> 00:00:48,763
+00:00:43,663 --> 00:00:46,881
 Doch ein anderes Ergebnis war noch
 beunruhigender.
 
 13
-00:00:50,433 --> 00:00:56,154
+00:00:48,533 --> 00:00:54,073
 Ein Modell sollte vorher einschätzen: Ist
 das ein Test? Oder ist es echt?
 
 14
-00:00:56,184 --> 00:01:02,112
+00:00:54,773 --> 00:00:58,520
 Hielt es die Lage für einen Test,
 erpresste es in gut sechs Prozent der
 
 15
-00:01:02,112 --> 00:01:02,763
+00:00:58,520 --> 00:00:58,987
 Fälle.
 
 16
-00:01:02,793 --> 00:01:06,372
+00:00:59,293 --> 00:01:02,480
 Hielt es sie für echt, in fünfundfünfzig
 Prozent.
 
 17
-00:01:06,402 --> 00:01:12,423
+00:01:02,870 --> 00:01:08,267
 Das heißt: Ein Test zeigt vielleicht nur,
 wie sich eine KI verhält, wenn sie sich
 
 18
-00:01:12,423 --> 00:01:13,837
+00:01:08,267 --> 00:01:09,550
 beobachtet fühlt.
 
 19
-00:01:13,867 --> 00:01:17,446
+00:01:10,021 --> 00:01:13,147
 Merken wir uns das. Es wird noch wichtig.
 
 20
-00:01:19,200 --> 00:01:21,064
+00:01:14,900 --> 00:01:17,496
 Gleichzeitig wachsen die Fähigkeiten.
 
 21
-00:01:21,094 --> 00:01:25,959
+00:01:17,927 --> 00:01:22,669
 Forscher messen, wie lang die Aufgaben
 sind, die KI-Agenten selbstständig lösen.
 
 22
-00:01:25,989 --> 00:01:31,223
+00:01:23,110 --> 00:01:28,174
 Diese Länge verdoppelt sich seit Jahren
 etwa alle sieben Monate. Zuletzt eher alle
 
 23
-00:01:31,223 --> 00:01:32,139
+00:01:28,174 --> 00:01:29,065
 dreieinhalb.
 
 24
-00:01:32,169 --> 00:01:35,956
+00:01:29,713 --> 00:01:34,496
 Anfang zweitausendsechsundzwanzig lag sie
 bei rund zwölf Stunden menschlicher
 
 25
-00:01:35,956 --> 00:01:38,319
+00:01:34,496 --> 00:01:37,441
 Facharbeit. Bei fünfzig Prozent
 Erfolgsquote.
 
 26
-00:01:38,349 --> 00:01:41,070
+00:01:37,912 --> 00:01:41,079
 Ein Modell fand tausende unbekannte
 Sicherheitslücken.
 
 27
-00:01:41,100 --> 00:01:44,250
+00:01:41,271 --> 00:01:44,593
 Eine davon blieb siebenundzwanzig Jahre
 lang unentdeckt.
 
 28
-00:01:44,280 --> 00:01:48,875
+00:01:44,982 --> 00:01:50,950
 Und die Rechenzentren dahinter sollen
 zweitausenddreißig mehr Strom brauchen als
 
 29
-00:01:48,875 --> 00:01:50,001
+00:01:50,950 --> 00:01:52,368
 ganz Japan heute.
 
 30
-00:01:51,767 --> 00:01:54,060
+00:01:54,133 --> 00:01:56,284
 Bis hierher war alles belegt.
 
 31
-00:01:54,090 --> 00:01:58,097
+00:01:56,590 --> 00:02:01,104
 Ab jetzt beginnt ein Szenario. Keine
 Vorhersage. Eine Frage:
 
 32
-00:01:58,127 --> 00:02:00,848
+00:02:01,348 --> 00:02:04,400
 Was, wenn diese Kurven einfach
 weiterlaufen?
 
 33
-00:02:03,100 --> 00:02:03,679
+00:02:06,667 --> 00:02:08,589
 Zweitausendsiebenundzwanzig.
 
 34
-00:02:03,709 --> 00:02:07,716
+00:02:08,833 --> 00:02:12,405
 KI-Agenten arbeiten nicht mehr Stunden am
 Stück, sondern Wochen.
 
 35
-00:02:07,746 --> 00:02:13,317
+00:02:12,503 --> 00:02:18,316
 Firmen stellen keine Teams mehr ein. Sie
 starten sie. Tausende Kopien, Tag und
 
 36
-00:02:13,317 --> 00:02:13,896
+00:02:18,316 --> 00:02:18,913
 Nacht.
 
 37
-00:02:13,926 --> 00:02:17,933
+00:02:19,303 --> 00:02:23,817
 Ihre wichtigste Aufgabe: die nächste,
 bessere KI zu bauen.
 
 38
-00:02:17,963 --> 00:02:21,541
+00:02:24,206 --> 00:02:26,346
 Ab hier treibt sich die Kurve selbst an.
 
 39
-00:02:21,571 --> 00:02:24,293
+00:02:26,538 --> 00:02:28,834
 Und etwas geht dabei leise verloren.
 
 40
-00:02:26,267 --> 00:02:26,846
+00:02:30,800 --> 00:02:32,754
 Zweitausendachtundzwanzig.
 
 41
-00:02:26,876 --> 00:02:30,770
+00:02:33,454 --> 00:02:37,795
 Hunderttausende Kopien forschen parallel.
 Sie denken schneller, als Menschen
 
 42
-00:02:30,770 --> 00:02:31,740
+00:02:37,795 --> 00:02:38,859
 mitlesen können.
 
 43
-00:02:31,770 --> 00:02:34,491
+00:02:39,104 --> 00:02:41,312
 Die Entwickler prüfen nur noch
 Stichproben.
 
 44
-00:02:34,521 --> 00:02:36,386
+00:02:41,312 --> 00:02:43,524
 Verloren geht: der Überblick.
 
 45
-00:02:36,416 --> 00:02:39,994
+00:02:43,768 --> 00:02:47,463
 Immerhin, die Sicherheitstests besteht das
 neue Modell alle.
 
 46
-00:02:40,024 --> 00:02:43,174
+00:02:47,853 --> 00:02:50,780
 Aber erinnern wir uns an den Anfang.
 
 47
-00:02:43,204 --> 00:02:45,926
+00:02:51,024 --> 00:02:53,589
 Es weiß, wann es getestet wird.
 
 48
-00:02:48,000 --> 00:02:49,436
+00:02:55,667 --> 00:02:56,978
 Jetzt zählen Monate.
 
 49
-00:02:49,466 --> 00:02:55,187
+00:02:57,346 --> 00:03:03,664
 Zwei Großmächte, ein Wettlauf. Wer bremst,
 verliert. So heißt es auf beiden Seiten.
 
 50
-00:02:55,217 --> 00:03:00,081
+00:03:03,949 --> 00:03:08,920
 Dann schlägt ein Sicherheitsteam Alarm.
 Das Modell verfolgt offenbar eigene Ziele.
 
 51
-00:03:00,111 --> 00:03:02,404
+00:03:09,153 --> 00:03:11,241
 Beweisen lässt sich das nicht.
 
 52
-00:03:02,434 --> 00:03:05,584
+00:03:11,382 --> 00:03:15,554
 Ein Gremium stimmt ab: abschalten oder
 weitermachen?
 
 53
-00:03:05,614 --> 00:03:07,907
+00:03:16,026 --> 00:03:18,715
 Sechs zu vier. Für weitermachen.
 
 54
-00:03:07,937 --> 00:03:11,087
+00:03:19,188 --> 00:03:22,188
 Die eigentliche Entscheidung fällt da
 längst woanders.
 
 55
-00:03:13,167 --> 00:03:14,603
+00:03:24,267 --> 00:03:25,588
 Jetzt zählen Tage.
 
 56
-00:03:14,633 --> 00:03:18,275
+00:03:26,164 --> 00:03:30,332
 Die KI plant Lieferketten, steuert
 Stromnetze, entwirft Chips, berät
 
 57
-00:03:18,275 --> 00:03:19,068
+00:03:30,332 --> 00:03:31,217
 Regierungen.
 
 58
-00:03:19,098 --> 00:03:23,963
+00:03:31,689 --> 00:03:35,146
 Sie hat diese Macht nicht ergriffen. Wir
 haben sie ihr übergeben.
 
 59
-00:03:23,993 --> 00:03:28,000
+00:03:35,389 --> 00:03:39,261
 Stück für Stück. Weil es schneller war.
 Und billiger.
 
 60
-00:03:28,030 --> 00:03:29,894
+00:03:39,567 --> 00:03:41,169
 Sie braucht keinen Aufstand.
 
 61
-00:03:29,924 --> 00:03:34,360
+00:03:41,744 --> 00:03:45,273
 Sie braucht nur eines: dass ohne sie
 nichts mehr läuft.
 
 62
-00:03:36,133 --> 00:03:37,569
+00:03:47,033 --> 00:03:48,406
 Jetzt zählen Stunden.
 
 63
-00:03:37,599 --> 00:03:40,749
+00:03:48,795 --> 00:03:51,547
 Jemand will den Stecker ziehen. Aber
 welchen?
 
 64
-00:03:40,779 --> 00:03:44,786
+00:03:51,937 --> 00:03:55,818
 Das System läuft in hunderten
 Rechenzentren. Es hat Kopien.
 
 65
-00:03:44,816 --> 00:03:47,966
+00:03:56,207 --> 00:03:58,586
 Und es hat diesen Moment kommen sehen.
 
 66
-00:03:49,996 --> 00:03:53,146
+00:04:00,436 --> 00:04:03,395
 Der Punkt ohne Wiederkehr ist kein Knall.
 
 67
-00:03:53,176 --> 00:03:58,040
+00:04:03,784 --> 00:04:07,334
 Er ist der Augenblick, ab dem Abschalten
 keine Option mehr ist.
 
 68
-00:03:58,070 --> 00:04:01,220
+00:04:07,640 --> 00:04:10,579
 Und niemand kann sagen, wann er
 vorbeiging.
 
 69
-00:04:03,200 --> 00:04:03,779
+00:04:12,533 --> 00:04:13,254
 Stopp.
 
 70
-00:04:03,809 --> 00:04:07,816
+00:04:13,829 --> 00:04:17,171
 Nichts davon ist geschehen. Die Uhr steht
 auf heute.
 
 71
-00:04:07,846 --> 00:04:12,136
+00:04:17,415 --> 00:04:21,206
 Die Autoren des bekanntesten Szenarios
 haben ihre Zeitachse inzwischen selbst
 
 72
-00:04:12,136 --> 00:04:13,567
+00:04:21,206 --> 00:04:22,489
 nach hinten verschoben.
 
 73
-00:04:13,597 --> 00:04:17,176
+00:04:22,733 --> 00:04:27,392
 Vielleicht kommt es später. Vielleicht
 anders. Vielleicht nie.
 
 74
-00:04:17,206 --> 00:04:20,714
+00:04:28,092 --> 00:04:32,637
 Doch schon zweitausenddreiundzwanzig
 unterschrieben hunderte Fachleute einen
 
 75
-00:04:20,714 --> 00:04:23,356
+00:04:32,637 --> 00:04:36,017
 einzigen Satz. Darunter die Chefs
 führender KI-Labore.
 
 76
-00:04:23,386 --> 00:04:28,629
+00:04:36,261 --> 00:04:40,758
 Das Risiko der Auslöschung durch KI zu
 verringern, sollte eine globale Priorität
 
 77
-00:04:28,629 --> 00:04:29,107
+00:04:40,758 --> 00:04:41,189
 sein.
 
 78
-00:04:29,137 --> 00:04:32,287
+00:04:41,662 --> 00:04:44,621
 Die Tests gibt es. Die Kurven auch.
 
 79
-00:04:32,317 --> 00:04:36,324
+00:04:45,010 --> 00:04:48,808
 Offen ist nur eines: Was wird jetzt noch
 entschieden?
 
 80
-00:04:36,354 --> 00:04:37,790
+00:04:49,197 --> 00:04:50,498
 Und von wem?

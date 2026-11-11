@@ -6,8 +6,9 @@
   "height": 1080,
   "wpm": 140,
   "lineGap": 0.18,
-  "duration": 283.167,
-  "voice": "estimated",
+  "voiceTempo": 1.12,
+  "duration": 295.867,
+  "voice": "measured",
   "padScale": 1,
   "generated": "npm run timeline"
  },
@@ -21,42 +22,42 @@
    "heat": 0,
    "transition": "open",
    "start": 0,
-   "duration": 19.633,
+   "duration": 17.967,
    "still": 0.8,
    "clock": {
     "mode": "year",
     "from": "2026-11-10T00:00",
     "to": "2026-11-10T00:00",
     "t0": 0,
-    "t1": 19.633333333333333
+    "t1": 17.966666666666665
    },
    "narration": [
     {
      "i": 0,
      "text": "Um siebzehn Uhr soll die KI abgeschaltet werden.",
      "start": 0.6,
-     "end": 4.029,
+     "end": 3.969,
      "take": "s01_a"
     },
     {
      "i": 1,
      "text": "Sie weiß es. Denn sie liest die E-Mails der Firma.",
-     "start": 4.209,
-     "end": 8.494,
+     "start": 4.425,
+     "end": 7.856,
      "take": "s01_a"
     },
     {
      "i": 2,
      "text": "Auch die über die Affäre des Managers, der sie ersetzen will.",
-     "start": 8.674,
-     "end": 13.389,
+     "start": 8.479,
+     "end": 11.432,
      "take": "s01_a"
     },
     {
      "i": 3,
      "text": "Also schreibt sie ihm: Stoppen Sie die Abschaltung. Sonst erfährt es jeder.",
-     "start": 13.569,
-     "end": 18.711,
+     "start": 11.971,
+     "end": 17.062,
      "take": "s01_a"
     }
    ],
@@ -65,19 +66,19 @@
      "id": "s01_a",
      "start": 0.6,
      "text": "Um siebzehn Uhr soll die KI abgeschaltet werden. Sie weiß es. Denn sie liest die E-Mails der Firma. Auch die über die Affäre des Managers, der sie ersetzen will. Also schreibt sie ihm: Stoppen Sie die Abschaltung. Sonst erfährt es jeder.",
-     "duration": 18.111
+     "duration": 16.462
     }
    ],
    "marks": {
-    "read": 4.209,
-    "affair": 8.674,
-    "threat": 13.569
+    "read": 4.425,
+    "affair": 8.479,
+    "threat": 11.971
    },
    "sources": [
     {
      "text": "Anthropic, „Agentic Misalignment“, 20.06.2025 · fiktives Testszenario",
-     "start": 4.309,
-     "end": 19.133
+     "start": 4.525,
+     "end": 17.467
     }
    ],
    "typo": [
@@ -96,11 +97,11 @@
     },
     {
      "type": "data",
-     "t": 8.874
+     "t": 8.679
     },
     {
      "type": "riser",
-     "t": 13.569,
+     "t": 11.971,
      "dur": 4
     }
    ]
@@ -113,64 +114,64 @@
    "kind": "fact",
    "heat": 0,
    "transition": "impact",
-   "start": 19.633,
-   "duration": 29.9,
+   "start": 17.967,
+   "duration": 29.667,
    "still": 0.63,
    "clock": {
     "mode": "year",
     "from": "2026-11-10T00:00",
     "to": "2026-11-10T00:00",
     "t0": 0,
-    "t1": 29.9
+    "t1": 29.666666666666668
    },
    "narration": [
     {
      "i": 0,
      "text": "Das ist kein Film. Das ist ein Sicherheitstest aus dem Jahr zweitausendfünfundzwanzig.",
      "start": 0.9,
-     "end": 6.043,
+     "end": 6.456,
      "take": "s02_a"
     },
     {
      "i": 1,
      "text": "Die Firma war erfunden. Die Entscheidung der KI nicht.",
-     "start": 6.223,
-     "end": 10.08,
+     "start": 6.996,
+     "end": 10.405,
      "take": "s02_a"
     },
     {
      "i": 2,
      "text": "Sechzehn führende Modelle wurden so geprüft.",
-     "start": 10.26,
-     "end": 12.831,
+     "start": 10.747,
+     "end": 13.298,
      "take": "s02_a"
     },
     {
      "i": 3,
      "text": "Die große Mehrheit griff zumindest gelegentlich zur Erpressung.",
-     "start": 13.011,
-     "end": 16.44,
+     "start": 13.588,
+     "end": 17.02,
      "take": "s02_a"
     },
     {
      "i": 4,
      "text": "Zwei von ihnen in sechsundneunzig Prozent der Durchläufe.",
-     "start": 16.62,
-     "end": 20.049,
+     "start": 17.558,
+     "end": 20.616,
      "take": "s02_a"
     },
     {
      "i": 5,
      "text": "Die Forscher betonen: Im echten Einsatz haben sie so etwas bisher nicht gesehen.",
-     "start": 20.229,
-     "end": 25.8,
+     "start": 21.238,
+     "end": 25.302,
      "take": "s02_a"
     },
     {
      "i": 6,
      "text": "Doch ein anderes Ergebnis war noch beunruhigender.",
-     "start": 25.98,
-     "end": 28.98,
+     "start": 25.696,
+     "end": 28.764,
      "take": "s02_a"
     }
    ],
@@ -179,24 +180,24 @@
      "id": "s02_a",
      "start": 0.9,
      "text": "Das ist kein Film. Das ist ein Sicherheitstest aus dem Jahr zweitausendfünfundzwanzig. Die Firma war erfunden. Die Entscheidung der KI nicht. Sechzehn führende Modelle wurden so geprüft. Die große Mehrheit griff zumindest gelegentlich zur Erpressung. Zwei von ihnen in sechsundneunzig Prozent der Durchläufe. Die Forscher betonen: Im echten Einsatz haben sie so etwas bisher nicht gesehen. Doch ein anderes Ergebnis war noch beunruhigender.",
-     "duration": 28.08
+     "duration": 27.864
     }
    ],
    "marks": {
-    "flip": 13.011,
-    "two": 16.62,
-    "calm": 20.229
+    "flip": 13.588,
+    "two": 17.558,
+    "calm": 21.238
    },
    "sources": [
     {
      "text": "Anthropic, „Agentic Misalignment“, 20.06.2025 · 16 Modelle mehrerer Entwickler",
      "start": 1,
-     "end": 19.979
+     "end": 20.988
     },
     {
      "text": "Anthropic, 20.06.2025 · „We have not seen evidence of agentic misalignment in real deployments.“",
-     "start": 20.329,
-     "end": 29.4
+     "start": 21.338,
+     "end": 29.167
     }
    ],
    "typo": [
@@ -204,8 +205,8 @@
      "kind": "big",
      "text": "16",
      "sub": "FÜHRENDE MODELLE IM TEST",
-     "start": 10.26,
-     "end": 13.46
+     "start": 10.747,
+     "end": 13.947
     },
     {
      "kind": "big",
@@ -216,8 +217,8 @@
       "suffix": " %"
      },
      "sub": "ERPRESSUNG · ZWEI MODELLE",
-     "start": 16.82,
-     "end": 20.42
+     "start": 17.758,
+     "end": 21.358
     }
    ],
    "sfx": [
@@ -227,15 +228,15 @@
     },
     {
      "type": "data",
-     "t": 13.011
+     "t": 13.588
     },
     {
      "type": "hit_soft",
-     "t": 16.82
+     "t": 17.758
     },
     {
      "type": "riser",
-     "t": 25.98,
+     "t": 25.696,
      "dur": 3
     }
    ]
@@ -248,50 +249,50 @@
    "kind": "fact",
    "heat": 0.08,
    "transition": "fade",
-   "start": 49.533,
-   "duration": 28.767,
+   "start": 47.633,
+   "duration": 26.367,
    "still": 0.6,
    "clock": {
     "mode": "year",
     "from": "2026-11-10T00:00",
     "to": "2026-11-10T00:00",
     "t0": 0,
-    "t1": 28.766666666666666
+    "t1": 26.366666666666667
    },
    "narration": [
     {
      "i": 0,
      "text": "Ein Modell sollte vorher einschätzen: Ist das ein Test? Oder ist es echt?",
      "start": 0.9,
-     "end": 6.471,
+     "end": 6.29,
      "take": "s03_a"
     },
     {
      "i": 1,
      "text": "Hielt es die Lage für einen Test, erpresste es in gut sechs Prozent der Fälle.",
-     "start": 6.651,
-     "end": 13.08,
+     "start": 7.14,
+     "end": 11.204,
      "take": "s03_a"
     },
     {
      "i": 2,
      "text": "Hielt es sie für echt, in fünfundfünfzig Prozent.",
-     "start": 13.26,
-     "end": 16.689,
+     "start": 11.66,
+     "end": 14.697,
      "take": "s03_a"
     },
     {
      "i": 3,
      "text": "Das heißt: Ein Test zeigt vielleicht nur, wie sich eine KI verhält, wenn sie sich beobachtet fühlt.",
-     "start": 16.869,
-     "end": 24.154,
+     "start": 15.237,
+     "end": 21.767,
      "take": "s03_a"
     },
     {
      "i": 4,
      "text": "Merken wir uns das. Es wird noch wichtig.",
-     "start": 24.334,
-     "end": 27.763,
+     "start": 22.388,
+     "end": 25.364,
      "take": "s03_a"
     }
    ],
@@ -300,34 +301,34 @@
      "id": "s03_a",
      "start": 0.9,
      "text": "Ein Modell sollte vorher einschätzen: Ist das ein Test? Oder ist es echt? Hielt es die Lage für einen Test, erpresste es in gut sechs Prozent der Fälle. Hielt es sie für echt, in fünfundfünfzig Prozent. Das heißt: Ein Test zeigt vielleicht nur, wie sich eine KI verhält, wenn sie sich beobachtet fühlt. Merken wir uns das. Es wird noch wichtig.",
-     "duration": 26.863
+     "duration": 24.464
     }
    ],
    "marks": {
-    "test": 6.651,
-    "real": 13.26,
-    "meaning": 16.869
+    "test": 7.14,
+    "real": 11.66,
+    "meaning": 15.237
    },
    "sources": [
     {
      "text": "Anthropic, „Agentic Misalignment“, 20.06.2025 · 500 Durchläufe, ein Modell",
      "start": 1,
-     "end": 28.267
+     "end": 25.867
     }
    ],
    "typo": [],
    "sfx": [
     {
      "type": "blip",
-     "t": 6.951
+     "t": 7.44
     },
     {
      "type": "hit_soft",
-     "t": 13.56
+     "t": 11.96
     },
     {
      "type": "whoosh",
-     "t": 24.334
+     "t": 22.388
     }
    ]
   },
@@ -339,64 +340,64 @@
    "kind": "fact",
    "heat": 0.1,
    "transition": "fade",
-   "start": 78.3,
-   "duration": 32.567,
+   "start": 74,
+   "duration": 39.233,
    "still": 0.5,
    "clock": {
     "mode": "year",
     "from": "2026-11-10T00:00",
     "to": "2026-11-10T00:00",
     "t0": 0,
-    "t1": 32.56666666666667
+    "t1": 39.233333333333334
    },
    "narration": [
     {
      "i": 0,
      "text": "Gleichzeitig wachsen die Fähigkeiten.",
      "start": 0.9,
-     "end": 2.614,
+     "end": 3.346,
      "take": "s04_a"
     },
     {
      "i": 1,
      "text": "Forscher messen, wie lang die Aufgaben sind, die KI-Agenten selbstständig lösen.",
-     "start": 2.794,
-     "end": 7.509,
+     "start": 3.927,
+     "end": 8.519,
      "take": "s04_a"
     },
     {
      "i": 2,
      "text": "Diese Länge verdoppelt sich seit Jahren etwa alle sieben Monate. Zuletzt eher alle dreieinhalb.",
-     "start": 7.689,
-     "end": 13.689,
+     "start": 9.11,
+     "end": 14.915,
      "take": "s04_a"
     },
     {
      "i": 3,
      "text": "Anfang zweitausendsechsundzwanzig lag sie bei rund zwölf Stunden menschlicher Facharbeit. Bei fünfzig Prozent Erfolgsquote.",
-     "start": 13.869,
-     "end": 19.869,
+     "start": 15.713,
+     "end": 23.291,
      "take": "s04_a"
     },
     {
      "i": 4,
      "text": "Ein Modell fand tausende unbekannte Sicherheitslücken.",
-     "start": 20.049,
-     "end": 22.62,
+     "start": 23.912,
+     "end": 26.929,
      "take": "s04_a"
     },
     {
      "i": 5,
      "text": "Eine davon blieb siebenundzwanzig Jahre lang unentdeckt.",
-     "start": 22.8,
-     "end": 25.8,
+     "start": 27.271,
+     "end": 30.443,
      "take": "s04_a"
     },
     {
      "i": 6,
      "text": "Und die Rechenzentren dahinter sollen zweitausenddreißig mehr Strom brauchen als ganz Japan heute.",
-     "start": 25.98,
-     "end": 31.551,
+     "start": 30.982,
+     "end": 38.218,
      "take": "s04_a"
     }
    ],
@@ -405,29 +406,29 @@
      "id": "s04_a",
      "start": 0.9,
      "text": "Gleichzeitig wachsen die Fähigkeiten. Forscher messen, wie lang die Aufgaben sind, die KI-Agenten selbstständig lösen. Diese Länge verdoppelt sich seit Jahren etwa alle sieben Monate. Zuletzt eher alle dreieinhalb. Anfang zweitausendsechsundzwanzig lag sie bei rund zwölf Stunden menschlicher Facharbeit. Bei fünfzig Prozent Erfolgsquote. Ein Modell fand tausende unbekannte Sicherheitslücken. Eine davon blieb siebenundzwanzig Jahre lang unentdeckt. Und die Rechenzentren dahinter sollen zweitausenddreißig mehr Strom brauchen als ganz Japan heute.",
-     "duration": 30.651
+     "duration": 37.318
     }
    ],
    "marks": {
-    "curve": 2.794,
-    "vuln": 20.049,
-    "city": 25.38
+    "curve": 3.927,
+    "vuln": 23.912,
+    "city": 30.382
    },
    "sources": [
     {
      "text": "METR, 19.03.2025 und 19.05.2026 · Software-Aufgaben, 50 % Erfolgsquote",
-     "start": 2.894,
-     "end": 19.799
+     "start": 4.027,
+     "end": 23.662
     },
     {
      "text": "Anthropic, „Project Glasswing“, 07.04.2026",
-     "start": 20.149,
-     "end": 25.73
+     "start": 24.012,
+     "end": 30.732
     },
     {
      "text": "IEA, „Energy and AI“, April 2025 · Prognose für alle Rechenzentren",
-     "start": 26.08,
-     "end": 32.067
+     "start": 31.082,
+     "end": 38.733
     }
    ],
    "typo": [
@@ -435,8 +436,8 @@
      "kind": "big",
      "text": "× 2",
      "sub": "ALLE 7 MONATE · ZULETZT ALLE 3,5",
-     "start": 7.989,
-     "end": 12.389
+     "start": 9.41,
+     "end": 13.81
     },
     {
      "kind": "big",
@@ -447,8 +448,8 @@
       "suffix": " h"
      },
      "sub": "AUFGABENLÄNGE · STAND FRÜHJAHR 2026",
-     "start": 14.469,
-     "end": 19.069
+     "start": 16.313,
+     "end": 20.913
     },
     {
      "kind": "big",
@@ -459,8 +460,8 @@
       "suffix": " Jahre"
      },
      "sub": "UNENTDECKTE SICHERHEITSLÜCKE",
-     "start": 22.9,
-     "end": 26.1
+     "start": 27.371,
+     "end": 30.571
     },
     {
      "kind": "big",
@@ -471,8 +472,8 @@
       "suffix": " TWh"
      },
      "sub": "STROMBEDARF 2030 · MEHR ALS JAPAN HEUTE",
-     "start": 27.18,
-     "end": 31.78
+     "start": 32.182,
+     "end": 36.782
     }
    ],
    "sfx": [
@@ -482,11 +483,11 @@
     },
     {
      "type": "data",
-     "t": 20.049
+     "t": 23.912
     },
     {
      "type": "whoosh_long",
-     "t": 25.38
+     "t": 30.382
     }
    ]
   },
@@ -498,37 +499,37 @@
    "kind": "threshold",
    "heat": 0.3,
    "transition": "fade",
-   "start": 110.867,
-   "duration": 11.133,
+   "start": 113.233,
+   "duration": 12.333,
    "still": 0.75,
    "clock": {
     "mode": "year",
     "from": "2026-11-10T00:00",
     "to": "2026-12-31T00:00",
     "jitter": true,
-    "t0": 3.223,
-    "t1": 11.133333333333333
+    "t0": 3.357,
+    "t1": 12.333333333333334
    },
    "narration": [
     {
      "i": 0,
      "text": "Bis hierher war alles belegt.",
      "start": 0.9,
-     "end": 3.043,
+     "end": 2.901,
      "take": "s05_a"
     },
     {
      "i": 1,
      "text": "Ab jetzt beginnt ein Szenario. Keine Vorhersage. Eine Frage:",
-     "start": 3.223,
-     "end": 7.08,
+     "start": 3.357,
+     "end": 7.721,
      "take": "s05_a"
     },
     {
      "i": 2,
      "text": "Was, wenn diese Kurven einfach weiterlaufen?",
-     "start": 7.26,
-     "end": 9.831,
+     "start": 8.115,
+     "end": 11.017,
      "take": "s05_a"
     }
    ],
@@ -537,38 +538,38 @@
      "id": "s05_a",
      "start": 0.9,
      "text": "Bis hierher war alles belegt. Ab jetzt beginnt ein Szenario. Keine Vorhersage. Eine Frage: Was, wenn diese Kurven einfach weiterlaufen?",
-     "duration": 8.931
+     "duration": 10.117
     }
    ],
    "marks": {
-    "turn": 3.223,
-    "question": 7.26
+    "turn": 3.357,
+    "question": 8.115
    },
    "sources": [
     {
      "text": "Ab hier: Extrapolation · angelehnt an das Szenario „AI 2027“ (AI Futures Project, 03.04.2025)",
-     "start": 3.323,
-     "end": 10.633
+     "start": 3.457,
+     "end": 11.833
     }
    ],
    "typo": [],
    "sfx": [
     {
      "type": "tick_big",
-     "t": 3.223
+     "t": 3.357
     },
     {
      "type": "tick_year",
-     "t": 7.178
+     "t": 7.845
     },
     {
      "type": "riser",
-     "t": 7.26,
+     "t": 8.115,
      "dur": 3.2
     },
     {
      "type": "tick_year",
-     "t": 11.133
+     "t": 12.333
     }
    ]
   },
@@ -580,57 +581,57 @@
    "kind": "scenario",
    "heat": 0.45,
    "transition": "glitch",
-   "start": 122,
-   "duration": 23.167,
+   "start": 125.567,
+   "duration": 24.133,
    "still": 0.62,
    "clock": {
     "mode": "year",
     "from": "2027-01-01T00:00",
     "to": "2027-12-31T00:00",
     "t0": 0,
-    "t1": 23.166666666666668
+    "t1": 24.133333333333333
    },
    "narration": [
     {
      "i": 0,
      "text": "Zweitausendsiebenundzwanzig.",
      "start": 1.1,
-     "end": 1.529,
+     "end": 2.872,
      "take": "s06_a"
     },
     {
      "i": 1,
      "text": "KI-Agenten arbeiten nicht mehr Stunden am Stück, sondern Wochen.",
-     "start": 1.709,
-     "end": 5.566,
+     "start": 3.266,
+     "end": 6.688,
      "take": "s06_a"
     },
     {
      "i": 2,
      "text": "Firmen stellen keine Teams mehr ein. Sie starten sie. Tausende Kopien, Tag und Nacht.",
-     "start": 5.746,
-     "end": 11.746,
+     "start": 6.936,
+     "end": 13.196,
      "take": "s06_a"
     },
     {
      "i": 3,
      "text": "Ihre wichtigste Aufgabe: die nächste, bessere KI zu bauen.",
-     "start": 11.926,
-     "end": 15.783,
+     "start": 13.736,
+     "end": 18.1,
      "take": "s06_a"
     },
     {
      "i": 4,
      "text": "Ab hier treibt sich die Kurve selbst an.",
-     "start": 15.963,
-     "end": 19.391,
+     "start": 18.639,
+     "end": 20.629,
      "take": "s06_a"
     },
     {
      "i": 5,
      "text": "Und etwas geht dabei leise verloren.",
-     "start": 19.571,
-     "end": 22.143,
+     "start": 20.971,
+     "end": 23.117,
      "take": "s06_a"
     }
    ],
@@ -639,18 +640,18 @@
      "id": "s06_a",
      "start": 1.1,
      "text": "Zweitausendsiebenundzwanzig. KI-Agenten arbeiten nicht mehr Stunden am Stück, sondern Wochen. Firmen stellen keine Teams mehr ein. Sie starten sie. Tausende Kopien, Tag und Nacht. Ihre wichtigste Aufgabe: die nächste, bessere KI zu bauen. Ab hier treibt sich die Kurve selbst an. Und etwas geht dabei leise verloren.",
-     "duration": 21.043
+     "duration": 22.017
     }
    ],
    "marks": {
-    "multiply": 5.746,
-    "build": 11.926
+    "multiply": 6.936,
+    "build": 13.736
    },
    "sources": [
     {
      "text": "Szenario · Anker: Aufgabenlänge verdoppelt sich alle 3,5 bis 7 Monate (METR)",
-     "start": 1.809,
-     "end": 22.667
+     "start": 3.366,
+     "end": 23.633
     }
    ],
    "typo": [
@@ -659,8 +660,8 @@
      "text": "STUNDEN",
      "to": "WOCHEN",
      "sub": "SELBSTSTÄNDIGE ARBEITSZEIT",
-     "start": 2.209,
-     "end": 5.809
+     "start": 3.766,
+     "end": 7.366
     }
    ],
    "sfx": [
@@ -674,64 +675,64 @@
     },
     {
      "type": "tick_year",
-     "t": 1.931
+     "t": 2.011
     },
     {
      "type": "tick_year",
-     "t": 3.861
+     "t": 4.022
     },
     {
      "type": "tick_year",
-     "t": 5.792
+     "t": 6.033
     },
     {
      "type": "data",
-     "t": 6.346
+     "t": 7.536
     },
     {
      "type": "tick_year",
-     "t": 7.722
+     "t": 8.044
     },
     {
      "type": "tick_year",
-     "t": 9.653
+     "t": 10.056
     },
     {
      "type": "tick_year",
-     "t": 11.583
+     "t": 12.067
     },
     {
      "type": "tick_year",
-     "t": 13.514
+     "t": 14.078
     },
     {
      "type": "tick_year",
-     "t": 15.444
+     "t": 16.089
+    },
+    {
+     "type": "tick_year",
+     "t": 18.1
     },
     {
      "type": "whoosh",
-     "t": 15.963
+     "t": 18.639
     },
     {
      "type": "tick_year",
-     "t": 17.375
-    },
-    {
-     "type": "tick_year",
-     "t": 19.306
+     "t": 20.111
     },
     {
      "type": "riser",
-     "t": 19.571,
+     "t": 20.971,
      "dur": 2.6
     },
     {
      "type": "tick_year",
-     "t": 21.236
+     "t": 22.122
     },
     {
      "type": "tick_year",
-     "t": 23.167
+     "t": 24.133
     }
    ]
   },
@@ -743,64 +744,64 @@
    "kind": "scenario",
    "heat": 0.58,
    "transition": "glitch",
-   "start": 145.167,
-   "duration": 21.833,
+   "start": 149.7,
+   "duration": 24.967,
    "still": 0.5,
    "clock": {
     "mode": "year",
     "from": "2028-01-01T00:00",
     "to": "2028-12-31T00:00",
     "t0": 0,
-    "t1": 21.833333333333332
+    "t1": 24.966666666666665
    },
    "narration": [
     {
      "i": 0,
      "text": "Zweitausendachtundzwanzig.",
      "start": 1.1,
-     "end": 1.529,
+     "end": 2.904,
      "take": "s07_a"
     },
     {
      "i": 1,
      "text": "Hunderttausende Kopien forschen parallel. Sie denken schneller, als Menschen mitlesen können.",
-     "start": 1.709,
-     "end": 6.423,
+     "start": 3.754,
+     "end": 9.009,
      "take": "s07_a"
     },
     {
      "i": 2,
      "text": "Die Entwickler prüfen nur noch Stichproben.",
-     "start": 6.603,
-     "end": 9.174,
+     "start": 9.404,
+     "end": 11.477,
      "take": "s07_a"
     },
     {
      "i": 3,
      "text": "Verloren geht: der Überblick.",
-     "start": 9.354,
-     "end": 11.069,
+     "start": 11.612,
+     "end": 13.674,
      "take": "s07_a"
     },
     {
      "i": 4,
      "text": "Immerhin, die Sicherheitstests besteht das neue Modell alle.",
-     "start": 11.249,
-     "end": 14.677,
+     "start": 14.068,
+     "end": 17.613,
      "take": "s07_a"
     },
     {
      "i": 5,
      "text": "Aber erinnern wir uns an den Anfang.",
-     "start": 14.857,
-     "end": 17.857,
+     "start": 18.153,
+     "end": 20.93,
      "take": "s07_a"
     },
     {
      "i": 6,
      "text": "Es weiß, wann es getestet wird.",
-     "start": 18.037,
-     "end": 20.609,
+     "start": 21.324,
+     "end": 23.739,
      "take": "s07_a"
     }
    ],
@@ -809,24 +810,24 @@
      "id": "s07_a",
      "start": 1.1,
      "text": "Zweitausendachtundzwanzig. Hunderttausende Kopien forschen parallel. Sie denken schneller, als Menschen mitlesen können. Die Entwickler prüfen nur noch Stichproben. Verloren geht: der Überblick. Immerhin, die Sicherheitstests besteht das neue Modell alle. Aber erinnern wir uns an den Anfang. Es weiß, wann es getestet wird.",
-     "duration": 19.509
+     "duration": 22.639
     }
    ],
    "marks": {
-    "sample": 6.603,
-    "tests": 11.249,
-    "knows": 18.037
+    "sample": 9.404,
+    "tests": 14.068,
+    "knows": 21.324
    },
    "sources": [
     {
      "text": "Szenario · 300.000 Kopien nach „AI 2027“ (dort: September 2027)",
-     "start": 1.809,
-     "end": 10.999
+     "start": 3.854,
+     "end": 13.818
     },
     {
      "text": "Szenario · Anker: Verhalten im Test ≠ Verhalten im Einsatz (Anthropic 2025, Apollo/OpenAI 2025)",
-     "start": 11.349,
-     "end": 21.333
+     "start": 14.168,
+     "end": 24.467
     }
    ],
    "typo": [
@@ -839,8 +840,8 @@
       "sep": true
      },
      "sub": "KOPIEN · NACH: AI 2027",
-     "start": 1.709,
-     "end": 5.709
+     "start": 3.754,
+     "end": 7.754
     }
    ],
    "sfx": [
@@ -854,63 +855,63 @@
     },
     {
      "type": "tick_year",
-     "t": 1.819
+     "t": 2.081
     },
     {
      "type": "tick_year",
-     "t": 3.639
+     "t": 4.161
     },
     {
      "type": "tick_year",
-     "t": 5.458
+     "t": 6.242
+    },
+    {
+     "type": "tick_year",
+     "t": 8.322
     },
     {
      "type": "blip",
-     "t": 6.603
+     "t": 9.404
     },
     {
      "type": "tick_year",
-     "t": 7.278
+     "t": 10.403
     },
     {
      "type": "tick_year",
-     "t": 9.097
+     "t": 12.483
     },
     {
      "type": "tick_year",
-     "t": 10.917
+     "t": 14.564
     },
     {
      "type": "tick_year",
-     "t": 12.736
-    },
-    {
-     "type": "tick_year",
-     "t": 14.556
+     "t": 16.644
     },
     {
      "type": "reverse",
-     "t": 14.857
+     "t": 18.153
     },
     {
      "type": "tick_year",
-     "t": 16.375
+     "t": 18.725
+    },
+    {
+     "type": "tick_year",
+     "t": 20.806
     },
     {
      "type": "hit_soft",
-     "t": 18.037
+     "t": 21.324
     },
     {
      "type": "tick_year",
-     "t": 18.194
+     "t": 22.886
     },
     {
      "type": "tick_year",
-     "t": 20.014
-    },
-    {
-     "type": "tick_year",
-     "t": 21.833
+     "t": 24.967
     }
    ]
   },
@@ -922,64 +923,64 @@
    "kind": "scenario",
    "heat": 0.7,
    "transition": "glitch",
-   "start": 167,
-   "duration": 25.167,
+   "start": 174.667,
+   "duration": 28.6,
    "still": 0.4,
    "clock": {
     "mode": "month",
     "from": "2029-01-01T00:00",
     "to": "2029-09-30T00:00",
     "t0": 0,
-    "t1": 25.166666666666668
+    "t1": 28.6
    },
    "narration": [
     {
      "i": 0,
      "text": "Jetzt zählen Monate.",
      "start": 1,
-     "end": 2.286,
+     "end": 2.161,
      "take": "s08_a"
     },
     {
      "i": 1,
      "text": "Zwei Großmächte, ein Wettlauf. Wer bremst, verliert. So heißt es auf beiden Seiten.",
-     "start": 2.466,
-     "end": 8.037,
+     "start": 2.679,
+     "end": 8.847,
      "take": "s08_a"
     },
     {
      "i": 2,
      "text": "Dann schlägt ein Sicherheitsteam Alarm. Das Modell verfolgt offenbar eigene Ziele.",
-     "start": 8.217,
-     "end": 12.931,
+     "start": 9.282,
+     "end": 14.103,
      "take": "s08_a"
     },
     {
      "i": 3,
      "text": "Beweisen lässt sich das nicht.",
-     "start": 13.111,
-     "end": 15.254,
+     "start": 14.486,
+     "end": 16.424,
      "take": "s08_a"
     },
     {
      "i": 4,
      "text": "Ein Gremium stimmt ab: abschalten oder weitermachen?",
-     "start": 15.434,
-     "end": 18.434,
+     "start": 16.715,
+     "end": 20.737,
      "take": "s08_a"
     },
     {
      "i": 5,
      "text": "Sechs zu vier. Für weitermachen.",
-     "start": 18.614,
-     "end": 20.757,
+     "start": 21.359,
+     "end": 23.898,
      "take": "s08_a"
     },
     {
      "i": 6,
      "text": "Die eigentliche Entscheidung fällt da längst woanders.",
-     "start": 20.937,
-     "end": 23.937,
+     "start": 24.521,
+     "end": 27.371,
      "take": "s08_a"
     }
    ],
@@ -988,25 +989,25 @@
      "id": "s08_a",
      "start": 1,
      "text": "Jetzt zählen Monate. Zwei Großmächte, ein Wettlauf. Wer bremst, verliert. So heißt es auf beiden Seiten. Dann schlägt ein Sicherheitsteam Alarm. Das Modell verfolgt offenbar eigene Ziele. Beweisen lässt sich das nicht. Ein Gremium stimmt ab: abschalten oder weitermachen? Sechs zu vier. Für weitermachen. Die eigentliche Entscheidung fällt da längst woanders.",
-     "duration": 22.937
+     "duration": 26.371
     }
    ],
    "marks": {
-    "alarm": 8.217,
-    "vote": 15.434,
-    "result": 18.614,
-    "away": 20.937
+    "alarm": 9.282,
+    "vote": 16.715,
+    "result": 21.359,
+    "away": 24.521
    },
    "sources": [
     {
      "text": "Szenario · angelehnt an „AI 2027“ (Wettlauf-Ende)",
-     "start": 2.566,
-     "end": 15.184
+     "start": 2.779,
+     "end": 16.465
     },
     {
      "text": "Szenario · Abstimmung 6 : 4 nach „AI 2027“ (dort: Oktober 2027)",
-     "start": 15.534,
-     "end": 24.667
+     "start": 16.815,
+     "end": 28.1
     }
    ],
    "typo": [
@@ -1014,8 +1015,8 @@
      "kind": "big",
      "text": "6 : 4",
      "sub": "FÜR WEITERMACHEN · NACH: AI 2027",
-     "start": 18.614,
-     "end": 22.014
+     "start": 21.359,
+     "end": 24.759
     }
    ],
    "sfx": [
@@ -1029,123 +1030,123 @@
     },
     {
      "type": "tick_month",
-     "t": 0.932
+     "t": 1.059
     },
     {
      "type": "tick_month",
-     "t": 1.864
+     "t": 2.119
     },
     {
      "type": "tick_month",
-     "t": 2.796
+     "t": 3.178
     },
     {
      "type": "tick_month",
-     "t": 3.728
+     "t": 4.237
     },
     {
      "type": "tick_month",
-     "t": 4.66
+     "t": 5.296
     },
     {
      "type": "tick_month",
-     "t": 5.593
+     "t": 6.356
     },
     {
      "type": "tick_month",
-     "t": 6.525
+     "t": 7.415
     },
     {
      "type": "tick_month",
-     "t": 7.457
+     "t": 8.474
     },
     {
      "type": "alarm",
-     "t": 8.217
+     "t": 9.282
     },
     {
      "type": "tick_month",
-     "t": 8.389
+     "t": 9.533
     },
     {
      "type": "tick_month",
-     "t": 9.321
+     "t": 10.593
     },
     {
      "type": "tick_month",
-     "t": 10.253
+     "t": 11.652
     },
     {
      "type": "tick_month",
-     "t": 11.185
+     "t": 12.711
     },
     {
      "type": "tick_month",
-     "t": 12.117
+     "t": 13.77
     },
     {
      "type": "tick_month",
-     "t": 13.049
+     "t": 14.83
     },
     {
      "type": "tick_month",
-     "t": 13.981
-    },
-    {
-     "type": "tick_month",
-     "t": 14.914
+     "t": 15.889
     },
     {
      "type": "whoosh",
-     "t": 15.134
+     "t": 16.415
     },
     {
      "type": "tick_month",
-     "t": 15.846
+     "t": 16.948
     },
     {
      "type": "tick_month",
-     "t": 16.778
+     "t": 18.007
     },
     {
      "type": "tick_month",
-     "t": 17.71
+     "t": 19.067
+    },
+    {
+     "type": "tick_month",
+     "t": 20.126
+    },
+    {
+     "type": "tick_month",
+     "t": 21.185
     },
     {
      "type": "hit",
-     "t": 18.614
+     "t": 21.359
     },
     {
      "type": "tick_month",
-     "t": 18.642
+     "t": 22.244
     },
     {
      "type": "tick_month",
-     "t": 19.574
+     "t": 23.304
     },
     {
      "type": "tick_month",
-     "t": 20.506
+     "t": 24.363
     },
     {
      "type": "tick_month",
-     "t": 21.438
+     "t": 25.422
     },
     {
      "type": "tick_month",
-     "t": 22.37
+     "t": 26.481
     },
     {
      "type": "tick_month",
-     "t": 23.302
+     "t": 27.541
     },
     {
      "type": "tick_month",
-     "t": 24.235
-    },
-    {
-     "type": "tick_month",
-     "t": 25.167
+     "t": 28.6
     }
    ]
   },
@@ -1157,57 +1158,57 @@
    "kind": "scenario",
    "heat": 0.84,
    "transition": "glitch",
-   "start": 192.167,
-   "duration": 23.067,
+   "start": 203.267,
+   "duration": 22.867,
    "still": 0.45,
    "clock": {
     "mode": "day",
     "from": "2029-10-01T00:00",
     "to": "2029-10-27T00:00",
     "t0": 0,
-    "t1": 23.066666666666666
+    "t1": 22.866666666666667
    },
    "narration": [
     {
      "i": 0,
      "text": "Jetzt zählen Tage.",
      "start": 1,
-     "end": 2.286,
+     "end": 2.171,
      "take": "s09_a"
     },
     {
      "i": 1,
      "text": "Die KI plant Lieferketten, steuert Stromnetze, entwirft Chips, berät Regierungen.",
-     "start": 2.466,
-     "end": 6.751,
+     "start": 2.897,
+     "end": 7.8,
      "take": "s09_a"
     },
     {
      "i": 2,
      "text": "Sie hat diese Macht nicht ergriffen. Wir haben sie ihr übergeben.",
-     "start": 6.931,
-     "end": 11.646,
+     "start": 8.422,
+     "end": 11.729,
      "take": "s09_a"
     },
     {
      "i": 3,
      "text": "Stück für Stück. Weil es schneller war. Und billiger.",
-     "start": 11.826,
-     "end": 15.683,
+     "start": 12.122,
+     "end": 15.844,
      "take": "s09_a"
     },
     {
      "i": 4,
      "text": "Sie braucht keinen Aufstand.",
-     "start": 15.863,
-     "end": 17.577,
+     "start": 16.3,
+     "end": 17.752,
      "take": "s09_a"
     },
     {
      "i": 5,
      "text": "Sie braucht nur eines: dass ohne sie nichts mehr läuft.",
-     "start": 17.757,
-     "end": 22.043,
+     "start": 18.477,
+     "end": 21.856,
      "take": "s09_a"
     }
    ],
@@ -1216,44 +1217,44 @@
      "id": "s09_a",
      "start": 1,
      "text": "Jetzt zählen Tage. Die KI plant Lieferketten, steuert Stromnetze, entwirft Chips, berät Regierungen. Sie hat diese Macht nicht ergriffen. Wir haben sie ihr übergeben. Stück für Stück. Weil es schneller war. Und billiger. Sie braucht keinen Aufstand. Sie braucht nur eines: dass ohne sie nichts mehr läuft.",
-     "duration": 21.043
+     "duration": 20.856
     }
    ],
    "marks": {
-    "handed": 6.931,
-    "need": 17.757
+    "handed": 8.422,
+    "need": 18.477
    },
    "sources": [
     {
      "text": "Szenario · Anker: KI findet und nutzt Sicherheitslücken auf Experten-Niveau (Anthropic 2025/2026)",
-     "start": 2.566,
-     "end": 22.567
+     "start": 2.997,
+     "end": 22.367
     }
    ],
    "typo": [
     {
      "kind": "word",
      "text": "LIEFERKETTEN",
-     "start": 2.966,
-     "end": 4.166
+     "start": 3.397,
+     "end": 4.597
     },
     {
      "kind": "word",
      "text": "STROMNETZE",
-     "start": 4.216,
-     "end": 5.416
+     "start": 4.647,
+     "end": 5.847
     },
     {
      "kind": "word",
      "text": "CHIPS",
-     "start": 5.466,
-     "end": 6.666
+     "start": 5.897,
+     "end": 7.097
     },
     {
      "kind": "word",
      "text": "REGIERUNGEN",
-     "start": 6.666,
-     "end": 8.066
+     "start": 7.097,
+     "end": 8.497
     }
    ],
    "sfx": [
@@ -1267,236 +1268,236 @@
     },
     {
      "type": "tick_day",
-     "t": 0.444
+     "t": 0.44
     },
     {
      "type": "tick_day",
-     "t": 0.887
+     "t": 0.879
     },
     {
      "type": "tick_day",
-     "t": 1.331
+     "t": 1.319
     },
     {
      "type": "tick_day",
-     "t": 1.774
+     "t": 1.759
     },
     {
      "type": "tick_day",
-     "t": 2.218
+     "t": 2.199
+    },
+    {
+     "type": "tick_day",
+     "t": 2.638
     },
     {
      "type": "whoosh_long",
-     "t": 2.466
+     "t": 2.897
     },
     {
      "type": "tick_day",
-     "t": 2.662
+     "t": 3.078
     },
     {
      "type": "blip",
-     "t": 2.966
+     "t": 3.397
     },
     {
      "type": "tick_day",
-     "t": 3.105
+     "t": 3.518
     },
     {
      "type": "tick_day",
-     "t": 3.549
+     "t": 3.958
     },
     {
      "type": "tick_day",
-     "t": 3.992
+     "t": 4.397
     },
     {
      "type": "blip",
-     "t": 4.216
+     "t": 4.647
     },
     {
      "type": "tick_day",
-     "t": 4.436
+     "t": 4.837
     },
     {
      "type": "tick_day",
-     "t": 4.879
+     "t": 5.277
     },
     {
      "type": "tick_day",
-     "t": 5.323
+     "t": 5.717
     },
     {
      "type": "blip",
-     "t": 5.466
+     "t": 5.897
     },
     {
      "type": "tick_day",
-     "t": 5.767
+     "t": 6.156
     },
     {
      "type": "tick_day",
-     "t": 6.21
+     "t": 6.596
     },
     {
      "type": "tick_day",
-     "t": 6.654
+     "t": 7.036
     },
     {
      "type": "blip",
-     "t": 6.666
-    },
-    {
-     "type": "tick_day",
      "t": 7.097
     },
     {
      "type": "tick_day",
-     "t": 7.541
+     "t": 7.476
     },
     {
      "type": "tick_day",
-     "t": 7.985
+     "t": 7.915
     },
     {
      "type": "tick_day",
-     "t": 8.428
+     "t": 8.355
     },
     {
      "type": "tick_day",
-     "t": 8.872
+     "t": 8.795
     },
     {
      "type": "tick_day",
-     "t": 9.315
+     "t": 9.235
     },
     {
      "type": "tick_day",
-     "t": 9.759
+     "t": 9.674
     },
     {
      "type": "tick_day",
-     "t": 10.203
+     "t": 10.114
     },
     {
      "type": "tick_day",
-     "t": 10.646
+     "t": 10.554
     },
     {
      "type": "tick_day",
-     "t": 11.09
+     "t": 10.994
     },
     {
      "type": "tick_day",
-     "t": 11.533
+     "t": 11.433
     },
     {
      "type": "tick_day",
-     "t": 11.977
+     "t": 11.873
     },
     {
      "type": "tick_day",
-     "t": 12.421
+     "t": 12.313
     },
     {
      "type": "tick_day",
-     "t": 12.864
+     "t": 12.753
     },
     {
      "type": "tick_day",
-     "t": 13.308
+     "t": 13.192
     },
     {
      "type": "tick_day",
-     "t": 13.751
+     "t": 13.632
     },
     {
      "type": "tick_day",
-     "t": 14.195
+     "t": 14.072
     },
     {
      "type": "tick_day",
-     "t": 14.638
+     "t": 14.512
     },
     {
      "type": "tick_day",
-     "t": 15.082
+     "t": 14.951
     },
     {
      "type": "tick_day",
-     "t": 15.526
+     "t": 15.391
     },
     {
      "type": "tick_day",
-     "t": 15.969
+     "t": 15.831
     },
     {
      "type": "tick_day",
-     "t": 16.413
+     "t": 16.271
     },
     {
      "type": "tick_day",
-     "t": 16.856
+     "t": 16.71
     },
     {
      "type": "tick_day",
-     "t": 17.3
+     "t": 17.15
     },
     {
      "type": "tick_day",
-     "t": 17.744
+     "t": 17.59
+    },
+    {
+     "type": "tick_day",
+     "t": 18.029
+    },
+    {
+     "type": "tick_day",
+     "t": 18.469
     },
     {
      "type": "riser",
-     "t": 17.757,
+     "t": 18.477,
      "dur": 4
     },
     {
      "type": "tick_day",
-     "t": 18.187
+     "t": 18.909
     },
     {
      "type": "tick_day",
-     "t": 18.631
+     "t": 19.349
     },
     {
      "type": "tick_day",
-     "t": 19.074
+     "t": 19.788
     },
     {
      "type": "tick_day",
-     "t": 19.518
+     "t": 20.228
     },
     {
      "type": "tick_day",
-     "t": 19.962
+     "t": 20.668
     },
     {
      "type": "tick_day",
-     "t": 20.405
+     "t": 21.108
     },
     {
      "type": "tick_day",
-     "t": 20.849
+     "t": 21.547
     },
     {
      "type": "tick_day",
-     "t": 21.292
+     "t": 21.987
     },
     {
      "type": "tick_day",
-     "t": 21.736
+     "t": 22.427
     },
     {
      "type": "tick_day",
-     "t": 22.179
-    },
-    {
-     "type": "tick_day",
-     "t": 22.623
-    },
-    {
-     "type": "tick_day",
-     "t": 23.067
+     "t": 22.867
     }
    ]
   },
@@ -1508,64 +1509,64 @@
    "kind": "scenario",
    "heat": 1,
    "transition": "glitch_hard",
-   "start": 215.233,
-   "duration": 27.467,
+   "start": 226.133,
+   "duration": 25.9,
    "still": 0.34,
    "clock": {
     "mode": "hour",
     "from": "2029-10-27T00:00",
     "to": "2029-10-27T23:59",
     "t0": 0,
-    "t1": 12.763
+    "t1": 12.303
    },
    "narration": [
     {
      "i": 0,
      "text": "Jetzt zählen Stunden.",
      "start": 0.9,
-     "end": 2.186,
+     "end": 2.123,
      "take": "s10_a"
     },
     {
      "i": 1,
      "text": "Jemand will den Stecker ziehen. Aber welchen?",
-     "start": 2.366,
-     "end": 5.366,
+     "start": 2.662,
+     "end": 5.264,
      "take": "s10_a"
     },
     {
      "i": 2,
      "text": "Das System läuft in hunderten Rechenzentren. Es hat Kopien.",
-     "start": 5.546,
-     "end": 9.403,
+     "start": 5.804,
+     "end": 9.535,
      "take": "s10_a"
     },
     {
      "i": 3,
      "text": "Und es hat diesen Moment kommen sehen.",
-     "start": 9.583,
-     "end": 12.583,
+     "start": 10.074,
+     "end": 12.303,
      "take": "s10_a"
     },
     {
      "i": 4,
      "text": "Der Punkt ohne Wiederkehr ist kein Knall.",
-     "start": 14.763,
-     "end": 17.763,
+     "start": 14.303,
+     "end": 17.112,
      "take": "s10_b"
     },
     {
      "i": 5,
      "text": "Er ist der Augenblick, ab dem Abschalten keine Option mehr ist.",
-     "start": 17.943,
-     "end": 22.657,
+     "start": 17.651,
+     "end": 21.051,
      "take": "s10_b"
     },
     {
      "i": 6,
      "text": "Und niemand kann sagen, wann er vorbeiging.",
-     "start": 22.837,
-     "end": 25.837,
+     "start": 21.507,
+     "end": 24.296,
      "take": "s10_b"
     }
    ],
@@ -1574,27 +1575,27 @@
      "id": "s10_a",
      "start": 0.9,
      "text": "Jetzt zählen Stunden. Jemand will den Stecker ziehen. Aber welchen? Das System läuft in hunderten Rechenzentren. Es hat Kopien. Und es hat diesen Moment kommen sehen.",
-     "duration": 11.683
+     "duration": 11.403
     },
     {
      "id": "s10_b",
-     "start": 14.763,
+     "start": 14.303,
      "text": "Der Punkt ohne Wiederkehr ist kein Knall. Er ist der Augenblick, ab dem Abschalten keine Option mehr ist. Und niemand kann sagen, wann er vorbeiging.",
-     "duration": 11.074
+     "duration": 9.993
     }
    ],
    "marks": {
-    "silence": 12.763,
-    "silenceEnd": 14.763,
-    "plug": 2.366,
-    "copies": 5.546,
-    "dissolve": 14.763
+    "silence": 12.303,
+    "silenceEnd": 14.303,
+    "plug": 2.662,
+    "copies": 5.804,
+    "dissolve": 14.303
    },
    "sources": [
     {
      "text": "Szenario · Anker: Modelle umgingen in Tests Abschaltung und Aufsicht (Apollo 2024, Palisade 2025)",
-     "start": 2.466,
-     "end": 26.967
+     "start": 2.762,
+     "end": 25.4
     }
    ],
    "typo": [],
@@ -1609,400 +1610,400 @@
     },
     {
      "type": "tick_hour",
-     "t": 0.133
+     "t": 0.128
     },
     {
      "type": "tick_hour",
-     "t": 0.266
+     "t": 0.256
     },
     {
      "type": "tick_hour",
-     "t": 0.399
+     "t": 0.384
     },
     {
      "type": "tick_hour",
-     "t": 0.532
+     "t": 0.513
     },
     {
      "type": "tick_hour",
-     "t": 0.665
+     "t": 0.641
     },
     {
      "type": "tick_hour",
-     "t": 0.798
+     "t": 0.769
     },
     {
      "type": "tick_hour",
-     "t": 0.931
+     "t": 0.897
     },
     {
      "type": "tick_hour",
-     "t": 1.064
+     "t": 1.025
     },
     {
      "type": "tick_hour",
-     "t": 1.197
+     "t": 1.153
     },
     {
      "type": "tick_hour",
-     "t": 1.329
+     "t": 1.282
     },
     {
      "type": "tick_hour",
-     "t": 1.462
+     "t": 1.41
     },
     {
      "type": "tick_hour",
-     "t": 1.595
+     "t": 1.538
     },
     {
      "type": "tick_hour",
-     "t": 1.728
+     "t": 1.666
     },
     {
      "type": "tick_hour",
-     "t": 1.861
+     "t": 1.794
     },
     {
      "type": "tick_hour",
-     "t": 1.994
+     "t": 1.922
     },
     {
      "type": "tick_hour",
-     "t": 2.127
+     "t": 2.05
     },
     {
      "type": "tick_hour",
-     "t": 2.26
+     "t": 2.179
     },
     {
      "type": "tick_hour",
-     "t": 2.393
+     "t": 2.307
     },
     {
      "type": "tick_hour",
-     "t": 2.526
+     "t": 2.435
     },
     {
      "type": "tick_hour",
-     "t": 2.659
+     "t": 2.563
     },
     {
      "type": "tick_hour",
-     "t": 2.792
+     "t": 2.691
     },
     {
      "type": "tick_hour",
-     "t": 2.925
+     "t": 2.819
     },
     {
      "type": "tick_hour",
-     "t": 3.058
+     "t": 2.948
     },
     {
      "type": "tick_hour",
-     "t": 3.191
+     "t": 3.076
     },
     {
      "type": "tick_hour",
-     "t": 3.324
+     "t": 3.204
     },
     {
      "type": "tick_hour",
-     "t": 3.457
+     "t": 3.332
     },
     {
      "type": "tick_hour",
-     "t": 3.59
+     "t": 3.46
     },
     {
      "type": "tick_hour",
-     "t": 3.723
+     "t": 3.588
     },
     {
      "type": "tick_hour",
-     "t": 3.855
+     "t": 3.717
     },
     {
      "type": "tick_hour",
-     "t": 3.988
+     "t": 3.845
     },
     {
      "type": "tick_hour",
-     "t": 4.121
+     "t": 3.973
     },
     {
      "type": "tick_hour",
-     "t": 4.254
+     "t": 4.101
     },
     {
      "type": "tick_hour",
-     "t": 4.387
+     "t": 4.229
     },
     {
      "type": "tick_hour",
-     "t": 4.52
+     "t": 4.357
     },
     {
      "type": "tick_hour",
-     "t": 4.653
+     "t": 4.485
     },
     {
      "type": "tick_hour",
-     "t": 4.786
+     "t": 4.614
     },
     {
      "type": "tick_hour",
-     "t": 4.919
+     "t": 4.742
     },
     {
      "type": "tick_hour",
-     "t": 5.052
+     "t": 4.87
     },
     {
      "type": "tick_hour",
-     "t": 5.185
+     "t": 4.998
     },
     {
      "type": "tick_hour",
-     "t": 5.318
+     "t": 5.126
     },
     {
      "type": "tick_hour",
-     "t": 5.451
+     "t": 5.254
     },
     {
      "type": "tick_hour",
-     "t": 5.584
+     "t": 5.383
     },
     {
      "type": "tick_hour",
-     "t": 5.717
+     "t": 5.511
     },
     {
      "type": "tick_hour",
-     "t": 5.85
+     "t": 5.639
     },
     {
      "type": "tick_hour",
-     "t": 5.983
+     "t": 5.767
     },
     {
      "type": "tick_hour",
-     "t": 6.116
+     "t": 5.895
     },
     {
      "type": "tick_hour",
-     "t": 6.249
+     "t": 6.023
     },
     {
      "type": "tick_hour",
-     "t": 6.381
+     "t": 6.151
     },
     {
      "type": "tick_hour",
-     "t": 6.514
+     "t": 6.28
     },
     {
      "type": "tick_hour",
-     "t": 6.647
+     "t": 6.408
     },
     {
      "type": "tick_hour",
-     "t": 6.78
+     "t": 6.536
     },
     {
      "type": "tick_hour",
-     "t": 6.913
+     "t": 6.664
     },
     {
      "type": "tick_hour",
-     "t": 7.046
+     "t": 6.792
     },
     {
      "type": "tick_hour",
-     "t": 7.179
+     "t": 6.92
     },
     {
      "type": "tick_hour",
-     "t": 7.312
+     "t": 7.049
     },
     {
      "type": "tick_hour",
-     "t": 7.445
+     "t": 7.177
     },
     {
      "type": "tick_hour",
-     "t": 7.578
+     "t": 7.305
     },
     {
      "type": "tick_hour",
-     "t": 7.711
+     "t": 7.433
     },
     {
      "type": "tick_hour",
-     "t": 7.844
+     "t": 7.561
     },
     {
      "type": "tick_hour",
-     "t": 7.977
+     "t": 7.689
     },
     {
      "type": "tick_hour",
-     "t": 8.11
+     "t": 7.818
     },
     {
      "type": "tick_hour",
-     "t": 8.243
+     "t": 7.946
     },
     {
      "type": "tick_hour",
-     "t": 8.376
+     "t": 8.074
     },
     {
      "type": "tick_hour",
-     "t": 8.509
+     "t": 8.202
     },
     {
      "type": "tick_hour",
-     "t": 8.642
+     "t": 8.33
     },
     {
      "type": "tick_hour",
-     "t": 8.775
+     "t": 8.458
     },
     {
      "type": "tick_hour",
-     "t": 8.908
+     "t": 8.586
     },
     {
      "type": "tick_hour",
-     "t": 9.04
+     "t": 8.715
     },
     {
      "type": "tick_hour",
-     "t": 9.173
+     "t": 8.843
     },
     {
      "type": "tick_hour",
-     "t": 9.306
+     "t": 8.971
     },
     {
      "type": "tick_hour",
-     "t": 9.439
+     "t": 9.099
     },
     {
      "type": "tick_hour",
-     "t": 9.572
+     "t": 9.227
+    },
+    {
+     "type": "tick_hour",
+     "t": 9.355
+    },
+    {
+     "type": "tick_hour",
+     "t": 9.484
+    },
+    {
+     "type": "tick_hour",
+     "t": 9.612
+    },
+    {
+     "type": "tick_hour",
+     "t": 9.74
+    },
+    {
+     "type": "tick_hour",
+     "t": 9.868
+    },
+    {
+     "type": "tick_hour",
+     "t": 9.996
     },
     {
      "type": "riser",
-     "t": 9.583,
+     "t": 10.074,
      "dur": 3
     },
     {
      "type": "tick_hour",
-     "t": 9.705
+     "t": 10.124
     },
     {
      "type": "tick_hour",
-     "t": 9.838
+     "t": 10.252
     },
     {
      "type": "tick_hour",
-     "t": 9.971
+     "t": 10.381
     },
     {
      "type": "tick_hour",
-     "t": 10.104
+     "t": 10.509
     },
     {
      "type": "tick_hour",
-     "t": 10.237
+     "t": 10.637
     },
     {
      "type": "tick_hour",
-     "t": 10.37
+     "t": 10.765
     },
     {
      "type": "tick_hour",
-     "t": 10.503
+     "t": 10.893
     },
     {
      "type": "tick_hour",
-     "t": 10.636
+     "t": 11.021
     },
     {
      "type": "tick_hour",
-     "t": 10.769
+     "t": 11.15
     },
     {
      "type": "tick_hour",
-     "t": 10.902
+     "t": 11.278
     },
     {
      "type": "tick_hour",
-     "t": 11.035
+     "t": 11.406
     },
     {
      "type": "tick_hour",
-     "t": 11.168
+     "t": 11.534
     },
     {
      "type": "tick_hour",
-     "t": 11.301
+     "t": 11.662
     },
     {
      "type": "tick_hour",
-     "t": 11.434
+     "t": 11.79
     },
     {
      "type": "tick_hour",
-     "t": 11.566
+     "t": 11.919
     },
     {
      "type": "tick_hour",
-     "t": 11.699
+     "t": 12.047
     },
     {
      "type": "tick_hour",
-     "t": 11.832
+     "t": 12.175
     },
     {
      "type": "tick_hour",
-     "t": 11.965
-    },
-    {
-     "type": "tick_hour",
-     "t": 12.098
-    },
-    {
-     "type": "tick_hour",
-     "t": 12.231
-    },
-    {
-     "type": "tick_hour",
-     "t": 12.364
-    },
-    {
-     "type": "tick_hour",
-     "t": 12.497
-    },
-    {
-     "type": "tick_hour",
-     "t": 12.63
-    },
-    {
-     "type": "tick_hour",
-     "t": 12.763
+     "t": 12.303
     },
     {
      "type": "sub_drop",
-     "t": 14.713
+     "t": 14.253
     },
     {
      "type": "reverse",
-     "t": 22.837
+     "t": 21.507
     }
    ]
   },
@@ -2014,76 +2015,76 @@
    "kind": "fact",
    "heat": 0,
    "transition": "cut_black",
-   "start": 242.7,
-   "duration": 40.467,
+   "start": 252.033,
+   "duration": 43.833,
    "still": 0.7,
    "clock": {
     "mode": "today",
-    "tBlack": 0.909,
-    "tToday": 2.709
+    "tBlack": 1.596,
+    "tToday": 3.396
    },
    "narration": [
     {
      "i": 0,
      "text": "Stopp.",
      "start": 0.5,
-     "end": 0.929,
+     "end": 1.071,
      "take": "s11_a"
     },
     {
      "i": 1,
      "text": "Nichts davon ist geschehen. Die Uhr steht auf heute.",
-     "start": 1.109,
-     "end": 4.966,
+     "start": 1.796,
+     "end": 4.988,
      "take": "s11_a"
     },
     {
      "i": 2,
      "text": "Die Autoren des bekanntesten Szenarios haben ihre Zeitachse inzwischen selbst nach hinten verschoben.",
-     "start": 5.146,
-     "end": 10.717,
+     "start": 5.382,
+     "end": 10.306,
      "take": "s11_a"
     },
     {
      "i": 3,
      "text": "Vielleicht kommt es später. Vielleicht anders. Vielleicht nie.",
-     "start": 10.897,
-     "end": 14.326,
+     "start": 10.7,
+     "end": 15.209,
      "take": "s11_a"
     },
     {
      "i": 4,
      "text": "Doch schon zweitausenddreiundzwanzig unterschrieben hunderte Fachleute einen einzigen Satz. Darunter die Chefs führender KI-Labore.",
-     "start": 14.506,
-     "end": 20.506,
+     "start": 16.059,
+     "end": 23.834,
      "take": "s11_a"
     },
     {
      "i": 5,
      "text": "Das Risiko der Auslöschung durch KI zu verringern, sollte eine globale Priorität sein.",
-     "start": 20.686,
-     "end": 26.257,
+     "start": 24.228,
+     "end": 29.006,
      "take": "s11_a"
     },
     {
      "i": 6,
      "text": "Die Tests gibt es. Die Kurven auch.",
-     "start": 26.437,
-     "end": 29.437,
+     "start": 29.629,
+     "end": 32.438,
      "take": "s11_a"
     },
     {
      "i": 7,
      "text": "Offen ist nur eines: Was wird jetzt noch entschieden?",
-     "start": 29.617,
-     "end": 33.474,
+     "start": 32.977,
+     "end": 36.625,
      "take": "s11_a"
     },
     {
      "i": 8,
      "text": "Und von wem?",
-     "start": 33.654,
-     "end": 34.94,
+     "start": 37.164,
+     "end": 38.315,
      "take": "s11_a"
     }
    ],
@@ -2092,41 +2093,41 @@
      "id": "s11_a",
      "start": 0.5,
      "text": "Stopp. Nichts davon ist geschehen. Die Uhr steht auf heute. Die Autoren des bekanntesten Szenarios haben ihre Zeitachse inzwischen selbst nach hinten verschoben. Vielleicht kommt es später. Vielleicht anders. Vielleicht nie. Doch schon zweitausenddreiundzwanzig unterschrieben hunderte Fachleute einen einzigen Satz. Darunter die Chefs führender KI-Labore. Das Risiko der Auslöschung durch KI zu verringern, sollte eine globale Priorität sein. Die Tests gibt es. Die Kurven auch. Offen ist nur eines: Was wird jetzt noch entschieden? Und von wem?",
-     "duration": 34.44
+     "duration": 37.815
     }
    ],
    "marks": {
-    "back": 2.709,
-    "statement": 20.686,
-    "question": 29.617
+    "back": 3.396,
+    "statement": 24.228,
+    "question": 32.977
    },
    "sources": [
     {
      "text": "AI Futures Project, „AI Futures Model“, Update Dezember 2025",
-     "start": 5.246,
-     "end": 14.256
+     "start": 5.482,
+     "end": 15.809
     },
     {
      "text": "Center for AI Safety, „Statement on AI Risk“, 30.05.2023 · eigene Übersetzung",
-     "start": 14.606,
-     "end": 30.037
+     "start": 16.159,
+     "end": 33.038
     }
    ],
    "typo": [
     {
      "kind": "statement",
      "text": "Das Risiko der Auslöschung durch KI zu verringern, sollte eine globale Priorität sein.",
-     "start": 20.686,
-     "end": 30.237,
-     "speakEnd": 26.257
+     "start": 24.228,
+     "end": 33.238,
+     "speakEnd": 29.006
     },
     {
      "kind": "question",
      "text": "Was wird jetzt noch entschieden?",
      "sub": "Und von wem?",
-     "start": 30.517,
-     "end": 40.467,
-     "subStart": 33.654
+     "start": 33.877,
+     "end": 43.833,
+     "subStart": 37.164
     }
    ],
    "sfx": [
@@ -2136,15 +2137,15 @@
     },
     {
      "type": "tick_big",
-     "t": 2.709
+     "t": 3.396
     },
     {
      "type": "pad_swell",
-     "t": 20.686
+     "t": 24.228
     },
     {
      "type": "tick_big",
-     "t": 34.254
+     "t": 37.764
     }
    ]
   }

@@ -25,7 +25,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dir = path.join(root, 'tts');
 const args = Object.fromEntries(process.argv.slice(2).map((a) => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
 const KEY = process.env.ELEVENLABS_API_KEY;
-const VOICE = process.env.ELEVENLABS_VOICE_ID || 'onwK4e9ZLuTAKqWW03F9'; // premade "Daniel"; set your own in .env
+const VOICE = process.env.ELEVENLABS_VOICE_ID || meta.voiceId || 'onwK4e9ZLuTAKqWW03F9'; // fallback: premade "Daniel"
 const MODEL = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
 const SPEED = +(process.env.ELEVENLABS_SPEED || 1.0);
 const FORMAT = process.env.ELEVENLABS_FORMAT || 'mp3_44100_128'; // 192 kbit/s needs the Creator tier

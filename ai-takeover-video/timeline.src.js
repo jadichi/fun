@@ -15,6 +15,12 @@ export const meta = {
   height: 1080,
   wpm: 140, // estimate until real voice timings exist
   lineGap: 0.18, // seconds between narration lines (estimate)
+  // The generated takes are played back this much faster (pitch stays the same). 1.12 brings the
+  // full narration to the pace of the approved voice preview and keeps the film under 5:00.
+  voiceTempo: 1.12,
+  // ElevenLabs voice designed for this film ("Die Uhr läuft – Erzähler"). Not a secret; it only
+  // works together with the account's API key. ELEVENLABS_VOICE_ID in .env overrides it.
+  voiceId: 'TL6vSdnM6XbASSasKCfP',
 };
 
 const S = { silence: 2.0 };

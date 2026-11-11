@@ -19,11 +19,13 @@ const inputs = ['-i', A('music.wav'), '-i', A('sfx.wav'), ...(hasVoice ? ['-i', 
 // premix graph -> [pre]
 const graph = hasVoice
   ? [
+    // voice on top; music sits about 11 dB under it while it speaks and comes up in longer pauses
     '[2:a]aformat=channel_layouts=stereo,highpass=f=70,asplit=3[v][vk1][vk2]',
-    '[0:a][vk1]sidechaincompress=threshold=0.02:ratio=9:attack=15:release=450:knee=4[m]',
-    '[1:a][vk2]sidechaincompress=threshold=0.04:ratio=3:attack=10:release=300:knee=4[s]',
-    '[m]volume=0.8[m2]', '[s]volume=0.85[s2]', '[v]volume=1.0[v2]',
-    '[v2][m2][s2]amix=inputs=3:normalize=0:duration=longest[pre]',
+    // a dip around 2.5 kHz keeps the score out of the way of the consonants
+    '[0:a]volume=0.6,equalizer=f=2500:t=q:w=1.1:g=-4[m0]', '[1:a]volume=0.8[s0]',
+    '[m0][vk1]sidechaincompress=threshold=0.03:ratio=5:attack=30:release=900:knee=6[m2]',
+    '[s0][vk2]sidechaincompress=threshold=0.08:ratio=2:attack=10:release=400:knee=6[s2]',
+    '[v][m2][s2]amix=inputs=3:normalize=0:duration=longest[pre]',
   ]
   : ['[0:a]volume=1.0[m]', '[1:a]volume=0.9[s]', '[m][s]amix=inputs=2:normalize=0:duration=longest[pre]'];
 

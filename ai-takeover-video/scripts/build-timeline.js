@@ -17,6 +17,7 @@ const complete = timings && src.every((sc) => timings[sc.id]?.takes?.length && t
 if (timings && !complete) { console.warn('tts/timings.json ist unvollständig – es wird mit Schätzwerten gerechnet.'); timings = null; }
 
 const fps = meta.fps;
+const tempo = meta.voiceTempo || 1;
 const r3 = (x) => Math.round(x * 1000) / 1000;
 const words = (s) => s.trim().split(/\s+/).length;
 
@@ -53,8 +54,8 @@ const scenes = src.map((sc) => {
     const m = measured?.takes?.[takes.length]?.lines?.[take.lines.length];
     let start, end;
     if (m) {
-      start = take.start + m.start;
-      end = take.start + m.end;
+      start = take.start + m.start / tempo;
+      end = take.start + m.end / tempo;
     } else {
       start = t;
       end = t + (words(entry) / meta.wpm) * 60;
