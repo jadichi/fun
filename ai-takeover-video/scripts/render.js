@@ -13,9 +13,13 @@ import { startServer } from './server.js';
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const args = Object.fromEntries(process.argv.slice(2).map((a) => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
 
+const GPU = !!args.gpu || process.env.RENDER_GPU === '1';
+
 export function chromePath() {
   const c = [process.env.CHROME_PATH, process.env.PUPPETEER_EXECUTABLE_PATH, '/opt/pw-browsers/chromium', '/usr/bin/chromium', '/usr/bin/chromium-browser', '/usr/bin/google-chrome',
-    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].filter(Boolean);
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    'C:/Program Files/Google/Chrome/Application/chrome.exe', 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
+    'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', 'C:/Program Files/Microsoft/Edge/Application/msedge.exe'].filter(Boolean);
   const found = c.find((p) => fs.existsSync(p));
   if (!found) throw new Error('Kein Chrome/Chromium gefunden. Bitte CHROME_PATH setzen.');
   return found;
@@ -24,7 +28,8 @@ export function chromePath() {
 export async function openRenderer({ port, w, h, subs = false, only = null }) {
   const browser = await puppeteer.launch({
     executablePath: chromePath(), headless: true,
-    args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist',
+    // default: software GL (works everywhere, no GPU needed). --gpu or RENDER_GPU=1 uses the graphics card.
+    args: ['--no-sandbox', ...(GPU ? ['--enable-gpu', '--use-angle=default'] : ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader']), '--ignore-gpu-blocklist',
       '--disable-background-timer-throttling', '--disable-renderer-backgrounding', '--hide-scrollbars', `--window-size=${w},${h}`],
     defaultViewport: { width: w, height: h, deviceScaleFactor: 1 },
     protocolTimeout: 600000,
@@ -37,8 +42,8 @@ export async function openRenderer({ port, w, h, subs = false, only = null }) {
   const err = await page.evaluate('window.__error');
   if (err) throw new Error(err);
   // returns the frame at time T as a Buffer (png or jpeg)
-  const frame = async (T, type = 'png', quality = 0.95) => {
-    const url = await page.evaluate((T, type, quality) => { window.renderAt(T); return document.querySelector('canvas').toDataURL(`image/${type}`, quality); }, T, type, quality);
+  const frame = async (T, type = 'png', quality = 0.95, opts = {}) => {
+    const url = await page.evaluate((T, type, quality, opts) => { window.renderAt(T, opts); return document.querySelector('canvas').toDataURL(`image/${type}`, quality); }, T, type, quality, opts);
     return Buffer.from(url.slice(url.indexOf(',') + 1), 'base64');
   };
   return { browser, page, frame };
@@ -108,7 +113,7 @@ async function video() {
   }));
   server.close();
   const list = path.join(tmp, `concat_${path.basename(out, '.mp4')}.txt`);
-  fs.writeFileSync(list, segs.map((s) => `file '${s}'`).join('\n') + '\n');
+  fs.writeFileSync(list, segs.map((s) => `file '${s.replace(/\\/g, '/')}'`).join('\n') + '\n');
   execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', '-movflags', '+faststart', out], { stdio: 'inherit' });
   segs.forEach((s) => fs.rmSync(s));
   fs.rmSync(list);

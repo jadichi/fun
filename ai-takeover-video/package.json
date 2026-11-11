@@ -6,10 +6,14 @@
   "description": "Cinematic explainer video about a plausible AI takeover scenario, rendered entirely from code.",
   "scripts": {
     "timeline": "node scripts/build-timeline.js",
+    "voice:design": "node tts/design-voice.js",
+    "voice": "node tts/generate.js",
     "audio": "node audio/synth.js",
     "mix": "node scripts/mix.js",
     "styleframes": "node scripts/build-timeline.js && node scripts/render.js --mode=styleframes",
+    "thumbnails": "node scripts/thumbnails.js",
     "preview": "node scripts/pipeline.js preview",
+    "final": "node scripts/pipeline.js final",
     "serve": "node scripts/server.js"
   },
   "dependencies": {

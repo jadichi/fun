@@ -212,5 +212,31 @@ export function createHud(W, H) {
     if (st.subtitles) drawSubtitle(st.scene, st.t);
   }
 
-  return { canvas, draw };
+  // Thumbnail overlay: huge type on the left over a dark gradient, no clock, no labels.
+  // spec: { lines: [{ text, accent? }], sub, heat, size }
+  function thumb(spec) {
+    g.setTransform(1, 0, 0, 1, 0, 0);
+    g.clearRect(0, 0, W, H);
+    g.setTransform(k, 0, 0, k, 0, 0);
+    const grad = g.createLinearGradient(0, 0, 1500, 0);
+    grad.addColorStop(0, 'rgba(0,0,0,0.88)'); grad.addColorStop(0.55, 'rgba(0,0,0,0.62)'); grad.addColorStop(1, 'rgba(0,0,0,0)');
+    g.fillStyle = grad; g.fillRect(0, 0, 1920, 1080);
+    const accent = heatColor(spec.heat ?? 0.6);
+    const size = spec.size || 200;
+    // fit every line to the width first, then stack them
+    const rows = spec.lines.map((l) => { let s = l.size || size; while (width(l.text, `800 ${s}px ${SANS}`, -4) > 1500 && s > 60) s -= 6; return { ...l, s }; });
+    const total = rows.reduce((a, r) => a + r.s * 0.98, 0) + (spec.sub ? 96 : 0);
+    let top = 540 - total / 2;
+    g.fillStyle = css(accent); g.shadowColor = css(accent); g.shadowBlur = 30;
+    g.fillRect(84, top - 6, 16, total + 12); g.shadowBlur = 0;
+    for (const r of rows) {
+      g.shadowColor = 'rgba(0,0,0,0.9)'; g.shadowBlur = 40; g.shadowOffsetY = 8;
+      text(r.text, 140, top + r.s * 0.8, { font: `800 ${r.s}px ${SANS}`, color: r.accent ? css([lerp(accent[0], 1, 0.12), lerp(accent[1], 1, 0.12), lerp(accent[2], 1, 0.12)]) : '#ffffff', spacing: -4 });
+      g.shadowOffsetY = 0;
+      top += r.s * 0.98;
+    }
+    if (spec.sub) text(spec.sub, 146, top + 70, { font: `700 50px ${SANS}`, color: css(accent), spacing: 7 });
+  }
+
+  return { canvas, draw, thumb };
 }

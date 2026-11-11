@@ -12,6 +12,7 @@
 //   node tts/generate.js --only=s03_a   one take
 //   node tts/generate.js --list-voices  show the voices of the account
 //   node tts/generate.js --mock         no API call: silent placeholder takes for pipeline tests
+import './_proxy.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -27,6 +28,7 @@ const KEY = process.env.ELEVENLABS_API_KEY;
 const VOICE = process.env.ELEVENLABS_VOICE_ID || 'onwK4e9ZLuTAKqWW03F9'; // premade "Daniel"; set your own in .env
 const MODEL = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
 const SPEED = +(process.env.ELEVENLABS_SPEED || 1.0);
+const FORMAT = process.env.ELEVENLABS_FORMAT || 'mp3_44100_128'; // 192 kbit/s needs the Creator tier
 const API = 'https://api.elevenlabs.io/v1';
 const settings = { stability: 0.55, similarity_boost: 0.8, style: 0.15, use_speaker_boost: true, speed: SPEED };
 
@@ -52,7 +54,7 @@ const probe = (f) => parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_e
 const hash = (t) => crypto.createHash('sha1').update(JSON.stringify([t.text, VOICE, MODEL, settings])).digest('hex').slice(0, 12);
 
 async function synth(t) {
-  const r = await fetch(`${API}/text-to-speech/${VOICE}/with-timestamps?output_format=mp3_44100_192`, {
+  const r = await fetch(`${API}/text-to-speech/${VOICE}/with-timestamps?output_format=${FORMAT}`, {
     method: 'POST',
     headers: { 'xi-api-key': KEY, 'Content-Type': 'application/json' },
     body: JSON.stringify({ text: t.text, model_id: MODEL, voice_settings: settings, previous_text: t.prev, next_text: t.next, seed: 2026 }),
@@ -105,5 +107,6 @@ for (const t of takes) {
 }
 fs.writeFileSync(file, JSON.stringify(timings, null, 1));
 const total = Object.entries(timings).filter(([k]) => k !== '_mock').reduce((a, [, s]) => a + s.takes.reduce((b, t) => b + (t?.duration || 0), 0), 0);
-const wordCount = takes.reduce((a, t) => a + t.text.split(/\s+/).length, 0);
-console.log(`${args.mock ? 'MOCK · ' : ''}Stimme gesamt: ${total.toFixed(1)}s für ${wordCount} Wörter (${Math.round(wordCount / (total / 60))} Wörter/Minute, Schätzung war ${meta.wpm}) · ${chars} Zeichen neu erzeugt`);
+const have = new Set(Object.entries(timings).filter(([k]) => k !== '_mock').flatMap(([, s]) => s.takes.filter(Boolean).map((t) => t.id)));
+const wordCount = takes.filter((t) => have.has(t.id)).reduce((a, t) => a + t.text.split(/\s+/).length, 0);
+console.log(`${args.mock ? 'MOCK · ' : ''}Stimme: ${have.size}/${takes.length} Takes, ${total.toFixed(1)}s für ${wordCount} Wörter (${Math.round(wordCount / (total / 60))} Wörter/Minute, Schätzung war ${meta.wpm}) · ${chars} Zeichen neu erzeugt`);

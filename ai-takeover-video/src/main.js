@@ -57,7 +57,8 @@ async function init() {
     instances.push(mod.default({ THREE, W, H, aspect: W / H, land, def: s, timeline }));
   }
 
-  function renderAt(T) {
+  // o.thumb: render a clean frame with a thumbnail overlay instead of the HUD
+  function renderAt(T, o = {}) {
     T = clamp(T, 0, timeline.meta.duration - 1e-4);
     let idx = timeline.scenes.findIndex((s) => T < s.start + s.duration);
     if (idx < 0) idx = timeline.scenes.length - 1;
@@ -100,7 +101,8 @@ async function init() {
     post.bloom.radius = b.radius ?? 0.6;
     post.bloom.threshold = b.threshold ?? 0.1;
 
-    hud.draw({ timeline, T, frame, scene: s, t, labels: res.labels, subtitles, chrome: res.chrome, hide: res.hideHud });
+    if (o.thumb) { hud.thumb(o.thumb); glitch = 0; flash = 0; fade = 1; }
+    else hud.draw({ timeline, T, frame, scene: s, t, labels: res.labels, subtitles, chrome: res.chrome, hide: res.hideHud });
     hudTex.needsUpdate = true;
 
     const u = post.final.uniforms;
@@ -110,9 +112,9 @@ async function init() {
     u.uFlash.value = flash;
     u.uFade.value = fade;
     u.uCA.value = (0.0016 + 0.004 * s.heat) * (res.ca ?? 1);
-    u.uGrain.value = res.grain ?? 0.075;
+    u.uGrain.value = o.thumb ? 0.03 : res.grain ?? 0.075;
     u.uVignette.value = res.vignette ?? 0.85;
-    u.uExposure.value = res.exposure ?? 1;
+    u.uExposure.value = (res.exposure ?? 1) * (o.thumb?.exposure ?? 1);
     post.composer.render();
     return true;
   }
