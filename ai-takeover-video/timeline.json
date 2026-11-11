@@ -8,6 +8,7 @@
   "lineGap": 0.18,
   "duration": 283.167,
   "voice": "estimated",
+  "padScale": 1,
   "generated": "npm run timeline"
  },
  "scenes": [

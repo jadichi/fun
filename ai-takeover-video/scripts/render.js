@@ -1,8 +1,12 @@
 // Frame-by-frame export with Puppeteer. Time comes only from timeline.json.
 //   node scripts/render.js --mode=styleframes [--scene=s03] [--t=12.5] [--w=1920 --h=1080]
+//   node scripts/render.js --mode=video --w=1280 --h=720 --fps=15 [--subs] [--workers=4]
+//        [--from=0 --to=20] [--crf=20 --preset=veryfast] --out=render/tmp/video.mp4
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawn, execFileSync } from 'node:child_process';
+import os from 'node:os';
 import puppeteer from 'puppeteer-core';
 import { startServer } from './server.js';
 
@@ -63,6 +67,57 @@ async function styleframes() {
   server.close();
 }
 
+// Frame-by-frame video export. The frame range is split across several headless browsers;
+// each pipes JPEG frames into its own ffmpeg, the segments are joined without re-encoding.
+async function video() {
+  const w = +(args.w || 1920), h = +(args.h || 1080), fps = +(args.fps || 30);
+  const timeline = JSON.parse(fs.readFileSync(path.join(root, 'timeline.json'), 'utf8'));
+  const from = +(args.from || 0), to = Math.min(+(args.to || timeline.meta.duration), timeline.meta.duration);
+  const f0 = Math.round(from * fps), f1 = Math.round(to * fps), total = f1 - f0;
+  const workers = Math.max(1, Math.min(+(args.workers || Math.min(4, os.cpus().length)), total));
+  const out = path.resolve(root, args.out || 'render/tmp/video.mp4');
+  const tmp = path.join(root, 'render', 'tmp');
+  fs.mkdirSync(tmp, { recursive: true });
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  const { server, port } = await startServer();
+  const started = Date.now();
+  let done = 0, lastLog = 0;
+  const log = () => {
+    const el = (Date.now() - started) / 1000, rate = done / el;
+    console.log(`  ${done}/${total} Bilder  ${rate.toFixed(1)} fps  Rest ca. ${Math.round((total - done) / (rate || 1) / 60)} min`);
+  };
+  const segs = await Promise.all([...Array(workers).keys()].map(async (k) => {
+    const a = f0 + Math.floor((total * k) / workers), b = f0 + Math.floor((total * (k + 1)) / workers);
+    const seg = path.join(tmp, `seg_${path.basename(out, '.mp4')}_${String(k).padStart(2, '0')}.mp4`);
+    const r = await openRenderer({ port, w, h, subs: !!args.subs });
+    const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-',
+      '-c:v', 'libx264', '-preset', String(args.preset || 'medium'), '-crf', String(args.crf || 18), '-pix_fmt', 'yuv420p',
+      '-vf', 'scale=out_color_matrix=bt709:out_range=tv', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709', '-color_range', 'tv',
+      '-r', String(fps), '-video_track_timescale', '30000', seg], { stdio: ['pipe', 'inherit', 'inherit'] });
+    const closed = new Promise((res, rej) => ff.on('close', (c) => (c === 0 ? res() : rej(new Error(`ffmpeg exit ${c}`)))));
+    for (let f = a; f < b; f++) {
+      const buf = await r.frame(f / fps, 'jpeg', +(args.q || 0.95));
+      if (!ff.stdin.write(buf)) await new Promise((res) => ff.stdin.once('drain', res));
+      done++;
+      if (Date.now() - lastLog > 20000) { lastLog = Date.now(); log(); }
+    }
+    ff.stdin.end();
+    await closed;
+    await r.browser.close();
+    return seg;
+  }));
+  server.close();
+  const list = path.join(tmp, `concat_${path.basename(out, '.mp4')}.txt`);
+  fs.writeFileSync(list, segs.map((s) => `file '${s}'`).join('\n') + '\n');
+  execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', '-movflags', '+faststart', out], { stdio: 'inherit' });
+  segs.forEach((s) => fs.rmSync(s));
+  fs.rmSync(list);
+  console.log(`${path.relative(root, out)}: ${total} Bilder in ${((Date.now() - started) / 60000).toFixed(1)} min`);
+}
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  if ((args.mode || 'styleframes') === 'styleframes') await styleframes();
+  const mode = args.mode || 'styleframes';
+  if (mode === 'styleframes') await styleframes();
+  else if (mode === 'video') await video();
+  else throw new Error(`Unbekannter Modus: ${mode}`);
 }

@@ -10,16 +10,23 @@ import { tickTimes } from '../src/lib/clock.js';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const strict = process.argv.includes('--strict');
 const timingsFile = path.join(root, 'tts', 'timings.json');
-const timings = fs.existsSync(timingsFile) ? JSON.parse(fs.readFileSync(timingsFile, 'utf8')) : null;
+let timings = fs.existsSync(timingsFile) ? JSON.parse(fs.readFileSync(timingsFile, 'utf8')) : null;
+// placeholder takes from `tts/generate.js --mock` only count when asked for explicitly
+if (timings?._mock && !process.argv.includes('--mock')) timings = null;
+const complete = timings && src.every((sc) => timings[sc.id]?.takes?.length && timings[sc.id].takes.every((t) => t?.lines?.length));
+if (timings && !complete) { console.warn('tts/timings.json ist unvollständig – es wird mit Schätzwerten gerechnet.'); timings = null; }
 
 const fps = meta.fps;
 const r3 = (x) => Math.round(x * 1000) / 1000;
 const words = (s) => s.trim().split(/\s+/).length;
 
+// k scales the breathing room (lead/tail) of every scene; used to fit the 3:00..5:00 window
+function resolve(k) {
 let cursor = 0;
 const scenes = src.map((sc) => {
   const measured = timings?.[sc.id];
-  let t = sc.lead;
+  const lead = Math.max(0.25, sc.lead * k), tail = Math.max(0.35, sc.tail * k);
+  let t = lead;
   const narration = [];
   const takes = [];
   const marks = {};
@@ -62,7 +69,7 @@ const scenes = src.map((sc) => {
   takes.forEach((tk) => { tk.start = r3(tk.start); delete tk.lines; });
 
   const lastEnd = narration.at(-1).end;
-  const duration = Math.ceil((lastEnd + sc.tail) * fps) / fps;
+  const duration = Math.ceil((lastEnd + tail) * fps) / fps;
   const at = (a) => {
     const base = a.line === -1 || a.line === undefined ? (a.line === -1 ? duration : 0) : narration[a.line].start;
     return r3(Math.max(0, Math.min(duration, base + (a.dt || 0))));
@@ -109,6 +116,17 @@ const scenes = src.map((sc) => {
   cursor += duration;
   return scene;
 });
+return { scenes, duration: cursor };
+}
+
+// fit: shrink or stretch the pauses until the film is between 3:00 and 5:00 (with margin)
+let k = 1, res = resolve(1);
+const MAX = 296, MIN = 184;
+while (res.duration > MAX && k > 0.2) { k -= 0.05; res = resolve(k); }
+while (res.duration < MIN && k < 4) { k += 0.1; res = resolve(k); }
+if (k !== 1) console.log(`Pausen skaliert mit Faktor ${k.toFixed(2)}, damit die Länge passt.`);
+const { scenes } = res;
+let cursor = res.duration;
 
 // clock ticks and chapter impacts become sfx cues (absolute scene-local times)
 for (const s of scenes) {
@@ -122,7 +140,7 @@ for (const s of scenes) {
 
 const duration = r3(cursor);
 const timeline = {
-  meta: { ...meta, duration, voice: timings ? 'measured' : 'estimated', generated: 'npm run timeline' },
+  meta: { ...meta, duration, voice: timings ? (timings._mock ? 'mock' : 'measured') : 'estimated', padScale: +k.toFixed(2), generated: 'npm run timeline' },
   scenes,
 };
 fs.writeFileSync(path.join(root, 'timeline.json'), JSON.stringify(timeline, null, 1));
@@ -167,5 +185,6 @@ const total = mmss(duration);
 console.log(`timeline.json: ${scenes.length} Szenen, ${total} (${duration}s), Stimme: ${timeline.meta.voice}`);
 if (duration < 180 || duration > 300) {
   console.error(`WARNUNG: Gesamtlänge ${total} liegt außerhalb von 3:00 bis 5:00.`);
+  console.error('Stellschrauben: ELEVENLABS_SPEED in .env anpassen oder den Text in timeline.src.js kürzen/verlängern.');
   if (strict) process.exit(1);
 }

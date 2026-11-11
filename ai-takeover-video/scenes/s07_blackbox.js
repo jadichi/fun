@@ -35,9 +35,14 @@ export default function create({ def }) {
     inSample.push(dx * dx + dy * dy + dz * dz < SR * SR ? 1 : 0);
   }
   const nodes = makePoints({ pos: P, col: C, size: S, birth: B }, { fog: 0.012, twinkle: 0.5, revealSoft: 0.04 });
+  // the sampled nodes again, larger, so the patch really reads as lit
+  const si = inSample.map((v, i) => (v ? i : -1)).filter((i) => i >= 0);
+  const sp = new Float32Array(si.length * 3), sb = new Float32Array(si.length);
+  si.forEach((i, k) => { sp[k * 3] = P[i * 3]; sp[k * 3 + 1] = P[i * 3 + 1]; sp[k * 3 + 2] = P[i * 3 + 2]; sb[k] = B[i]; });
+  const lit = makePoints({ pos: sp, birth: sb, size: new Float32Array(si.length).fill(0.1) }, { fog: 0.012, twinkle: 0.6, revealSoft: 0.04 });
   const edges = makeLines({ pos: new Float32Array(ep), birth: new Float32Array(eb) }, { fog: 0.012, opacity: 0.07, revealSoft: 0.04 });
   const net = new THREE.Group();
-  net.add(edges, nodes);
+  net.add(edges, nodes, lit);
   scene.add(net);
   const coreGlow = glow(col, 16, 0.3);
   scene.add(coreGlow);
@@ -69,6 +74,9 @@ export default function create({ def }) {
     }
     ca.needsUpdate = true;
     edges.material.uniforms.uTint.value.setRGB(...base);
+    lit.material.uniforms.uReveal.value = grow;
+    lit.material.uniforms.uTint.value.setRGB(...sc);
+    lit.material.uniforms.uOpacity.value = 0.85 * sampleOn;
     coreGlow.material.color.setRGB(...base);
     coreGlow.material.opacity = 0.03 + 0.07 * grow + 0.06 * knows;
 

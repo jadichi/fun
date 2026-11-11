@@ -80,7 +80,7 @@ async function init() {
     if (tr.startsWith('glitch')) {
       const hard = tr === 'glitch_hard';
       glitch = Math.pow(Math.max(0, 1 - t / (hard ? 1.1 : 0.65)), 1.4);
-      flash = (hard ? 0.85 : 0.5) * Math.max(0, 1 - t / 0.1);
+      flash = (hard ? 0.55 : 0.28) * Math.max(0, 1 - t / 0.12);
     }
     if (next) {
       if (next.transition === 'fade') fade *= smooth(0, 0.45, rem);
