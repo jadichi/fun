@@ -91,7 +91,7 @@ async function video() {
     const seg = path.join(tmp, `seg_${path.basename(out, '.mp4')}_${String(k).padStart(2, '0')}.mp4`);
     const r = await openRenderer({ port, w, h, subs: !!args.subs });
     const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-',
-      '-c:v', 'libx264', '-preset', String(args.preset || 'medium'), '-crf', String(args.crf || 18), '-pix_fmt', 'yuv420p',
+      '-c:v', 'libx264', '-preset', String(args.preset || 'medium'), '-crf', String(args.crf || 18), ...(args.maxrate ? ['-maxrate', String(args.maxrate), '-bufsize', String(args.bufsize || args.maxrate)] : []), '-pix_fmt', 'yuv420p',
       '-vf', 'scale=out_color_matrix=bt709:out_range=tv', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709', '-color_range', 'tv',
       '-r', String(fps), '-video_track_timescale', '30000', seg], { stdio: ['pipe', 'inherit', 'inherit'] });
     const closed = new Promise((res, rej) => ff.on('close', (c) => (c === 0 ? res() : rej(new Error(`ffmpeg exit ${c}`)))));

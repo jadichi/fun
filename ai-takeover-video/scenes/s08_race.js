@@ -44,7 +44,7 @@ export default function create({ land, def }) {
   const c = new THREE.Color();
 
   function update({ t, u, marks }) {
-    const toVote = easeInOut(sat((t - marks.vote + 0.5) / 1.3));
+    const toVote = easeInOut(sat((t - marks.vote + 1.3) / 1.3));
     const away = easeInOut(sat((t - marks.away) / 3.0));
     // globe
     world.rotation.y = -1.9 + t * 0.045;
@@ -59,7 +59,7 @@ export default function create({ land, def }) {
     // council
     const res = marks.result;
     seats.forEach((s) => {
-      const on = smooth(marks.vote - 0.2, marks.vote + 0.8, t);
+      const on = smooth(marks.vote - 0.9, marks.vote - 0.1, t);
       const f = s.vote ? smooth(res + s.order * 0.16, res + s.order * 0.16 + 0.3, t) : 0;
       const col = [lerp(PAL.ice[0], 1.0, f), lerp(PAL.ice[1], 0.14, f), lerp(PAL.ice[2], 0.08, f)];
       const stay = s.vote ? 1 : lerp(1, 0.9, smooth(res, res + 1, t));
@@ -68,17 +68,17 @@ export default function create({ land, def }) {
       s.core.material.opacity = on; s.halo.material.opacity = 0.4 * on * stay * (1 + 0.3 * f); s.refl.material.opacity = 0.3 * on;
       s.halo.scale.setScalar(0.95 + 0.4 * f);
     });
-    table.material.uniforms.uOpacity.value = 0.45 * smooth(marks.vote - 0.3, marks.vote + 0.6, t);
+    table.material.uniforms.uOpacity.value = 0.45 * smooth(marks.vote - 0.9, marks.vote, t);
     table.material.uniforms.uTint.value.setRGB(0.6, 0.7, 0.9);
 
     // camera: orbit the globe, drop to the table, then rise so the globe looms over it
     const e = easeInOut(sat(t / marks.vote));
     const gx = lerp(-4.6, -3.0, e), gy = lerp(2.4, 1.8, e), gz = lerp(25, 22, e);
-    const cy = -30 + lerp(5.0, 6.6, away), cz = lerp(11.5, 14.5, away);
+    const cy = -30 + lerp(5.0, 5.4, away), cz = lerp(11.5, 17, away);
     aim(camera, lerp(gx, 0, toVote), lerp(gy, cy, toVote), lerp(gz, cz, toVote),
-      lerp(-2.4, -1.9, toVote), lerp(1.3, -30 + lerp(0.2, 5.5, away), toVote), 0);
+      lerp(-2.4, lerp(-1.9, 1.0, away), toVote), lerp(1.3, -30 + lerp(0.2, 2.6, away), toVote), lerp(0, -4 * away, toVote));
     // while the council votes, the globe hangs above it, dim until "woanders"
-    world.position.set(0, lerp(0, -30 + 13.5, toVote), lerp(0, -16, toVote));
+    world.position.set(0, lerp(0, -30 + 7.2, toVote), lerp(0, -14, toVote));
     const dim = lerp(1, 0.12 + 0.88 * away, toVote);
     globe.dots.material.uniforms.uOpacity.value = dim;
     globe.atmo.material.uniforms.uOpacity.value = 0.3 * dim;

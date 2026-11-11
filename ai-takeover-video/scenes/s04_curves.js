@@ -81,7 +81,7 @@ export default function create() {
     head.material.opacity = fa * (grow < 1 ? 1 : 0.6);
 
     city.setTint(PAL.blue, 1);
-    city.setOpacity(toCity);
+    city.setOpacity(Math.pow(toCity, 0.45));
 
     // camera: follow the head of the curve, then drop into the city
     const follow = easeInOut(sat(t / (marks.vuln + 2)));

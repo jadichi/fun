@@ -80,14 +80,14 @@ async function init() {
     if (tr.startsWith('glitch')) {
       const hard = tr === 'glitch_hard';
       glitch = Math.pow(Math.max(0, 1 - t / (hard ? 1.1 : 0.65)), 1.4);
-      flash = (hard ? 0.55 : 0.28) * Math.max(0, 1 - t / 0.12);
+      flash = (hard ? 1.0 : 0.6) * Math.max(0, 1 - t / 0.14);
     }
     if (next) {
       if (next.transition === 'fade') fade *= smooth(0, 0.45, rem);
       if (next.transition.startsWith('glitch')) glitch = Math.max(glitch, smooth(0.3, 0, rem) * 0.85);
     } else fade *= smooth(0, 1.4, rem);
     // sparse deterministic glitch sparks once control is slipping
-    if (s.heat > 0.65 && hash(Math.floor(T * 5) * 3.17) > 1.06 - s.heat * 0.14) glitch = Math.max(glitch, 0.22 + 0.2 * hash(frame));
+    if (!res.calm && s.heat > 0.65 && hash(Math.floor(T * 5) * 3.17) > 1.06 - s.heat * 0.14) glitch = Math.max(glitch, 0.22 + 0.2 * hash(frame));
     if (s.kind === 'threshold' && t > s.marks.turn) hudGlitch = sat((t - s.marks.turn) / 2) * (hash(Math.floor(frame / 2) * 1.7) > 0.86 ? 0.5 : 0.04);
     if (res.glitch) glitch = Math.max(glitch, res.glitch);
     if (res.fade !== undefined) fade *= res.fade;

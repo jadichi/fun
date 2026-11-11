@@ -16,7 +16,7 @@ if (mode === 'preview') {
   node('scripts/build-timeline.js', '--strict');
   node('audio/synth.js');
   node('scripts/mix.js', '--no-voice', '--out=audio/mix_preview.wav');
-  node('scripts/render.js', '--mode=video', '--w=1280', '--h=720', '--fps=15', '--subs', '--crf=21', '--out=render/tmp/preview_video.mp4');
+  node('scripts/render.js', '--mode=video', '--w=1280', '--h=720', '--fps=15', '--subs', '--crf=25', '--maxrate=2500k', '--bufsize=5000k', '--out=render/tmp/preview_video.mp4');
   run('ffmpeg', ['-y', '-loglevel', 'error', '-i', 'render/tmp/preview_video.mp4', '-i', 'audio/mix_preview.wav', '-map', '0:v', '-map', '1:a',
     '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', 'render/preview.mp4']);
   console.log('\nFertig: render/preview.mp4');

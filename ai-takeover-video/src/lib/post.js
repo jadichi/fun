@@ -57,12 +57,16 @@ const FinalShader = {
       col = col * (1.0 - ha * 0.82) + hcol;
       // glitch artefacts: noise blocks, scanlines, flash
       if (g > 0.001) {
-        vec2 blk = floor(vUv * vec2(48.0, 27.0));
+        // blocks show displaced, channel-rotated copies of the picture (datamosh look)
+        vec2 blk = floor(vUv * vec2(32.0, 18.0));
         float n = h21(blk + uSeed);
-        col += step(1.0 - g * 0.10, n) * vec3(0.9, 0.95, 1.0) * 0.5;
+        if (n > 1.0 - g * 0.16) {
+          vec2 o = vec2(h21(blk * 1.3 + uSeed) - 0.5, h21(blk * 2.1 + uSeed) - 0.5) * 0.3;
+          col = scene(vUv + o).gbr * 1.7 + 0.03;
+        }
         col *= 1.0 - 0.25 * g * step(0.5, fract(vUv.y * uRes.y * 0.5));
       }
-      col = mix(col, vec3(1.0), uFlash);
+      col = col * (1.0 + 2.4 * uFlash) + uFlash * vec3(0.10, 0.09, 0.08);
       col *= uFade;
       // display encoding + grain
       col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / 2.2));

@@ -73,7 +73,7 @@ export default function create({ def }) {
     aim(camera, Math.sin(tt * 31) * shake + 0.6 * (1 - plunge), Math.cos(tt * 27) * shake + 0.25 * (1 - plunge), cz, 0, 0, 0);
     camera.rotation.z = 0.25 * (1 - plunge) + (t > marks.dissolve ? 0.02 * (t - marks.dissolve) : 0);
     const inSilence = t >= T1 && t < marks.dissolve;
-    return { bloom: { strength: 1.05, radius: 0.72, threshold: 0.1 }, grain: inSilence ? 0.03 : 0.085, ca: inSilence ? 0.3 : 1 + plunge, exposure: inSilence ? 0.8 : 1 };
+    return { calm: t >= T1, bloom: { strength: 1.05, radius: 0.72, threshold: 0.1 }, grain: inSilence ? 0.03 : 0.085, ca: inSilence ? 0.3 : 1 + plunge, exposure: inSilence ? 0.8 : 1 };
   }
   return { scene, camera, update };
 }
